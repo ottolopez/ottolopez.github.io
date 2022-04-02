@@ -1,0 +1,11 @@
+# -FrontPage-
+
+Options None
+
+<Limit GET POST PUT DELETE>
+order deny,allow
+deny from all
+</Limit>
+AuthName partners-in-missions.org
+AuthUserFile /home/p25lh2gq/public_html/_vti_pvt/service.pwd
+AuthGroupFile /home/p25lh2gq/public_html/_vti_pvt/service.grp

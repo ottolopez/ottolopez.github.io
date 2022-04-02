@@ -1,0 +1,24 @@
+# -FrontPage-
+
+
+AuthUserFile /home/p25lh2gq/public_html/_vti_pvt/service.pwd
+AuthGroupFile /home/p25lh2gq/public_html/_vti_pvt/service.grp
+
+
+<Limit GET POST>
+order deny,allow
+deny from all
+allow from all
+</Limit>
+<Limit PUT DELETE>
+order deny,allow
+deny from all
+</Limit>
+AuthName partners-in-missions.org
+IndexIgnore .htaccess */.??* *~ *# */HEADER* */README* */_vti*
+
+# Block WordPress xmlrpc.php requests
+<Files xmlrpc.php>
+order deny,allow
+deny from all
+</Files>
