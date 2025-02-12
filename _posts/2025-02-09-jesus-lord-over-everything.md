@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Jesus, Lord Over Everything"
 date: 2025-02-09 10:00:00 +0000
 description: Think about a time someone sacrificed something valuable to help you. How did that impact you? What did it reveal about their priorities? When we recognize Jesus' lordship, everything we do becomes sacred service.
