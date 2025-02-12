@@ -4,13 +4,7 @@ title: "Jesus, Lord Over Everything"
 date: 2025-02-09 10:00:00 +0000
 ---
 
-#### Quick Links
-
-- [Facebook Video](https://www.facebook.com/AccessChurchGuatemala/videos/1078065150757134)
-- [Slides](https://drive.google.com/file/d/1iv1qKl83q-aYHxubg08VNcprrjhQbL_8/view?usp=drive_link)
-
-
-#### When we recognize Jesus' lordship, everything we do becomes sacred service.
+<p class="intro"><span class="dropcap">L</span>When we recognize Jesus' lordship, everything we do becomes sacred service.</p>
 
 _Matthew 21:1-11_
 
@@ -38,10 +32,15 @@ Choose one:
 > Help us, Holy Spirit, to hear the message clearly today.  
 > Holy Spirit, please stir our hearts to be obedient. Amen.
 
+#### Quick Links
+
+- [Facebook Video](https://www.facebook.com/AccessChurchGuatemala/videos/1078065150757134)
+- [Slides](https://drive.google.com/file/d/1iv1qKl83q-aYHxubg08VNcprrjhQbL_8/view?usp=drive_link)  
+
+
+
 ---
-
-
-
+  
 
 **Jesús, Señor sobre Todo**
 
