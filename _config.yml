@@ -23,8 +23,6 @@ navigation:
       url: /index.html
     - title: About
       url: /about
-    - title: Resources
-      url: /articles
     - title: Contact
       url: /contact
       
