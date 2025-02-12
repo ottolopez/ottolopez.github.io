@@ -33,8 +33,8 @@ Choose one:
 - [Slides](https://drive.google.com/file/d/1iv1qKl83q-aYHxubg08VNcprrjhQbL_8/view?usp=drive_link)  
 - [Español](https://docs.google.com/document/d/e/2PACX-1vRtPznBs5e3Z45rWE4wx103jrnsBjf4FPhEovViAvpYd6HRffHXF8kHCC9G07wapeCAnN1XaCzZYH4K/pub?embedded=true)
   
-<iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FAccessChurchGuatemala%2Fvideos%2F1078065150757134%2F&show_text=true&width=560&t=0" width="560" height="429" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+<iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FAccessChurchGuatemala%2Fvideos%2F1078065150757134%2F&show_text=true&width=560&t=0" width="800" height="600" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
   
-<iframe src="https://drive.google.com/file/d/1iv1qKl83q-aYHxubg08VNcprrjhQbL_8/preview" width="640" height="480" allow="autoplay"></iframe>
+<iframe src="https://drive.google.com/file/d/1iv1qKl83q-aYHxubg08VNcprrjhQbL_8/preview" width="800" height="600" allow="autoplay"></iframe>
   
-<iframe src="https://docs.google.com/document/d/e/2PACX-1vRtPznBs5e3Z45rWE4wx103jrnsBjf4FPhEovViAvpYd6HRffHXF8kHCC9G07wapeCAnN1XaCzZYH4K/pub?embedded=true"></iframe>
+<iframe src="https://drive.google.com/file/d/1WTKPHiEyQVcWz90M6Yh6NpNIU4ZCJvf6/preview" width="800" height="600" allow="autoplay"></iframe>
