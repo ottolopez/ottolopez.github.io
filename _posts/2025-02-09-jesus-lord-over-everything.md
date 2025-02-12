@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Jesus, Lord Over Everything - Jesús, Señor sobre Todo"
+title: "Jesus, Lord Over Everything (Jesús, Señor sobre Todo)"
 date: 2025-02-09 10:00:00 +0000
 description: Think about a time someone sacrificed something valuable to help you. How did that impact you? What did it reveal about their priorities? When we recognize Jesus' lordship, everything we do becomes sacred service.
 preacher: "Victor Lopez"
@@ -34,8 +34,11 @@ Choose one:
 - [Slides](https://drive.google.com/file/d/1iv1qKl83q-aYHxubg08VNcprrjhQbL_8/view)  
 - [Discussion Questions](https://drive.google.com/file/d/1WTKPHiEyQVcWz90M6Yh6NpNIU4ZCJvf6/view)
   
-<iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FAccessChurchGuatemala%2Fvideos%2F1078065150757134%2F&show_text=true&width=560&t=0" width="800" height="600" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+#### Video
+<iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FAccessChurchGuatemala%2Fvideos%2F1078065150757134%2F&show_text=false&width=560&t=0" width="800" height="600" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
   
+#### Slides
 <iframe src="https://drive.google.com/file/d/1iv1qKl83q-aYHxubg08VNcprrjhQbL_8/preview" width="800" height="600" allow="autoplay"></iframe>
   
+#### Discussion Questions
 <iframe src="https://drive.google.com/file/d/1WTKPHiEyQVcWz90M6Yh6NpNIU4ZCJvf6/preview" width="800" height="600" allow="autoplay"></iframe>
