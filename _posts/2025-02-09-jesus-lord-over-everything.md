@@ -4,7 +4,7 @@ title: "Jesus, Lord Over Everything"
 date: 2025-02-09 10:00:00 +0000
 ---
 
-<p class="intro"><span class="dropcap">L</span>When we recognize Jesus' lordship, everything we do becomes sacred service.</p>
+<p class="intro"><span class="dropcap">W</span>hen we recognize Jesus' lordship, everything we do becomes sacred service.</p>
 
 _Matthew 21:1-11_
 
@@ -24,13 +24,7 @@ Choose one:
 
 #### Prayer Focus
 
-> Thank you, God, for your love for us.  
-> Thank you, God, for your forgiveness.  
-> Thank you, God, for today and the opportunity to be here and worship you.  
-> Thank you, Jesus, for your example.  
-> Thank you, Jesus, for your grace for us.  
-> Help us, Holy Spirit, to hear the message clearly today.  
-> Holy Spirit, please stir our hearts to be obedient. Amen.
+> Thank you, God, for your love for us. Thank you, God, for your forgiveness. Thank you, God, for today and the opportunity to be here and worship you. Thank you, Jesus, for your example. Thank you, Jesus, for your grace for us. Help us, Holy Spirit, to hear the message clearly today. Holy Spirit, please stir our hearts to be obedient. Amen.
 
 #### Quick Links
 
@@ -64,12 +58,4 @@ Elige uno:
 
 #### Enfoque de Oración
 
-> Gracias Dios por tu amor hacia nosotros.  
-> Gracias Dios por tu perdón.  
-> Gracias Dios por este día y la oportunidad de estar aquí y adorarte.  
-> Gracias Jesús por tu ejemplo.  
-> Gracias Jesús por tu gracia hacia nosotros.  
-> Ayúdanos Espíritu Santo a escuchar el mensaje claramente hoy.  
-> Espíritu Santo, por favor mueve nuestros corazones a ser obedientes. Amén.
-
-
+> Gracias Dios por tu amor hacia nosotros. Gracias Dios por tu perdón. Gracias Dios por este día y la oportunidad de estar aquí y adorarte. Gracias Jesús por tu ejemplo. Gracias Jesús por tu gracia hacia nosotros. Ayúdanos Espíritu Santo a escuchar el mensaje claramente hoy. Espíritu Santo, por favor mueve nuestros corazones a ser obedientes. Amén.
