@@ -2,15 +2,21 @@
 layout: base
 ---
 
-<article class="post">
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title">{{ page.title | escape }}</h1>
-    {% if page.preacher %}
-      <p class="post-preacher">Preached by: {{ page.preacher }}</p>
-    {% endif %}
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        {{ page.date | date: date_format }}
+      </time>
+      {%- if page.preacher -%}
+        <br>
+        <span class="post-preacher">Preached by: {{ page.preacher }}</span>
+      {%- endif -%}
+    </p>
   </header>
-
-  <div class="post-content">
+  <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>
 </article>
