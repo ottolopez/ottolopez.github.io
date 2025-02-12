@@ -4,6 +4,10 @@ title: "Jesus, Lord Over Everything"
 date: 2025-02-09 10:00:00 +0000
 preacher: "Victor Lopez"
 ---
+[Facebook Video](https://www.facebook.com/AccessChurchGuatemala/videos/1078065150757134)
+[Slides](https://drive.google.com/file/d/1iv1qKl83q-aYHxubg08VNcprrjhQbL_8/view?usp=drive_link)
+
+
 
 When we recognize Jesus' lordship, everything we do becomes sacred service.
 
@@ -35,6 +39,9 @@ Choose one:
 
 ---
 
+
+
+
 **Jesús, Señor sobre Todo**
 
 Cuando reconocemos el señorío de Jesús, todo lo que hacemos se convierte en servicio sagrado.
@@ -64,3 +71,5 @@ Elige uno:
 > Gracias Jesús por tu gracia hacia nosotros.  
 > Ayúdanos Espíritu Santo a escuchar el mensaje claramente hoy.  
 > Espíritu Santo, por favor mueve nuestros corazones a ser obedientes. Amén.
+
+
