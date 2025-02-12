@@ -8,7 +8,7 @@ title: Inside Access
 	<div class="posts noList">
 		{%- for post in paginator.posts -%}
 		<article>
-			<span class="date">{{ post.date | date: '%B %d, %Y' }} | | {%- if page.preacher -%}{{ page.preacher }}{%- endif -%}</span>
+			<span class="date">{{ post.date | date: '%B %d, %Y' }}{%- if page.preacher -%} | {{ page.preacher }}</span>{%- endif -%}
 			<h3>
 				<a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
 			</h3>

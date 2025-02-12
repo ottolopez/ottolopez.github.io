@@ -9,7 +9,7 @@ layout: default
   {%- endif -%}
   <header>
     <h1 class="postTitle">{{ page.title }}</h1>
-    <p class="meta">{{ page.date | date: '%B %d, %Y' }} | <span class="time">{%- if page.preacher -%}{{ page.preacher }}{%- endif -%}</span></p>
+    <p class="meta">{{ page.date | date: '%B %d, %Y' }} {%- if page.preacher -%}| <span class="time">{{ page.preacher }}</span>{%- endif -%}</p>
   </header>
 
   {{ content }}
