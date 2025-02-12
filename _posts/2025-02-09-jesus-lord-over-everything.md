@@ -7,8 +7,8 @@ preacher: "Victor Lopez"
 
 #### Quick Links
 
-[Facebook Video](https://www.facebook.com/AccessChurchGuatemala/videos/1078065150757134)
-[Slides](https://drive.google.com/file/d/1iv1qKl83q-aYHxubg08VNcprrjhQbL_8/view?usp=drive_link)
+- [Facebook Video](https://www.facebook.com/AccessChurchGuatemala/videos/1078065150757134)
+- [Slides](https://drive.google.com/file/d/1iv1qKl83q-aYHxubg08VNcprrjhQbL_8/view?usp=drive_link)
 
 
 #### When we recognize Jesus' lordship, everything we do becomes sacred service.
