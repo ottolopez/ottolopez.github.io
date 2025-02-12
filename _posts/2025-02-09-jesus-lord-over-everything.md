@@ -2,7 +2,6 @@
 layout: post
 title: "Jesus, Lord Over Everything"
 date: 2025-02-09 10:00:00 +0000
-preacher: "Victor Lopez"
 ---
 
 #### Quick Links
