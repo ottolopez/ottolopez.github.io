@@ -21,8 +21,8 @@ paginate: 5
 navigation:
     - title: Home
       url: /index.html
-    - title: About
-      url: /about
+    - title: QR Code Generator
+      url: /qrgenerator
     - title: Contact
       url: /contact
       
