@@ -6,7 +6,7 @@ title: QR Code Generator
 <div class="post">
    <div class="container">
         <h1>QR Code Generator</h1>
-        <input type="text" id="text" placeholder="Enter full URL INCLUDING https:// "">
+        <input type="text" id="text" placeholder="Enter full URL">
         <br>
         <button onclick="generateQR()">Generate QR Code</button>
         <button onclick="downloadQR()">Download QR Code</button>
