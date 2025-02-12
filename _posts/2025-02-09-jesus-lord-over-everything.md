@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Jesus, Lord Over Everything"
-date: {{ site.time | date: '%Y-%m-%d %H:%M:%S %z' }}
+date: 2025-02-09 10:00:00 +0000
 categories: faith spirituality
 ---
 
