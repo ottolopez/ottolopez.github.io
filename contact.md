@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Contact Long Haul
+title: Inside Access | Contact Us
 ---
 
 <div id="contact">
