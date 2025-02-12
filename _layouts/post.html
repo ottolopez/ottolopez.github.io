@@ -1,0 +1,16 @@
+---
+layout: base
+---
+
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+    {% if page.preacher %}
+      <p class="post-preacher">Preached by: {{ page.preacher }}</p>
+    {% endif %}
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+</article>

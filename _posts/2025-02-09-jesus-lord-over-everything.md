@@ -2,7 +2,7 @@
 layout: post
 title: "Jesus, Lord Over Everything"
 date: 2025-02-09 10:00:00 +0000
-categories: faith spirituality
+preacher: "Victor Lopez"
 ---
 
 When we recognize Jesus' lordship, everything we do becomes sacred service.
