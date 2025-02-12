@@ -5,6 +5,7 @@ date: 2025-02-09 10:00:00 +0000
 description: Think about a time someone sacrificed something valuable to help you. How did that impact you? What did it reveal about their priorities? When we recognize Jesus' lordship, everything we do becomes sacred service.
 preacher: "Victor Lopez"
 ---
+[Click aquí para Español](https://drive.google.com/file/d/1WTKPHiEyQVcWz90M6Yh6NpNIU4ZCJvf6/view)
 <p class="intro"><span class="dropcap">W</span>hen we recognize Jesus' lordship, everything we do becomes sacred service.</p>
 
 _Matthew 21:1-11_
@@ -30,8 +31,8 @@ Choose one:
 #### Quick Links
 
 - [Facebook Video](https://www.facebook.com/AccessChurchGuatemala/videos/1078065150757134)
-- [Slides](https://drive.google.com/file/d/1iv1qKl83q-aYHxubg08VNcprrjhQbL_8/view?usp=drive_link)  
-- [Español](https://docs.google.com/document/d/e/2PACX-1vRtPznBs5e3Z45rWE4wx103jrnsBjf4FPhEovViAvpYd6HRffHXF8kHCC9G07wapeCAnN1XaCzZYH4K/pub?embedded=true)
+- [Slides](https://drive.google.com/file/d/1iv1qKl83q-aYHxubg08VNcprrjhQbL_8/view)  
+- [Discussion Questions](https://drive.google.com/file/d/1WTKPHiEyQVcWz90M6Yh6NpNIU4ZCJvf6/view)
   
 <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FAccessChurchGuatemala%2Fvideos%2F1078065150757134%2F&show_text=true&width=560&t=0" width="800" height="600" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
   
