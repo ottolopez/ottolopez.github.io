@@ -52,6 +52,10 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				directory: {
+					hover: 'hsl(var(--directory-hover))',
+					border: 'hsl(var(--directory-border))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
