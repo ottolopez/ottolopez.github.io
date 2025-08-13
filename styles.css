@@ -88,7 +88,7 @@ main {
 }
 
 .resources h3 {
-    color: #00796b; /* Teal */
+    color: #004d40; /* Dark Teal */
     margin-bottom: 10px;
     font-size: 1.2rem;
 }
@@ -109,12 +109,12 @@ main {
 }
 .resources a {
     text-decoration: none;
-    color: #0277bd; /* Light Blue */
+    color: #01579b; /* Darker Blue */
     font-weight: 500;
     transition: color 0.3s ease;
 }
 .resources a:hover, .resources a:focus {
-    color: #004c8c; /* Darker Blue */
+    color: #002f6c; /* Even Darker Blue */
     text-decoration: underline;
 }
 footer {
@@ -179,7 +179,7 @@ body.dark-mode footer {
     color: #9e9e9e;
 }
 #theme-toggle {
-    background-color: #4CAF50; /* Green */
+    background-color: #388E3C; /* Darker Green */
     border: none;
     color: white;
     padding: 10px 20px;
