@@ -58,7 +58,35 @@ main {
     border-bottom: 2px solid #b2dfdb; /* Light Teal */
     padding-bottom: 10px;
     margin-top: 0;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
 }
+
+.level h2::after {
+    content: '+';
+    position: absolute;
+    right: 10px;
+    font-size: 1.5rem;
+    color: #00796b;
+    transition: transform 0.3s ease;
+}
+
+.level.active h2::after {
+    transform: rotate(45deg);
+    content: '−';
+}
+
+.resources {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+.level.active .resources {
+    max-height: 500px; /* Adjust this value if content is taller */
+}
+
 .resources h3 {
     color: #00796b; /* Teal */
     margin-bottom: 10px;
