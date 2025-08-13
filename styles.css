@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: visible;
+}
+header {
+    background: #00796b; /* Teal */
+    color: #ffffff;
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+main {
+    padding: 2rem 0;
+    flex-grow: 1;
+}
+.levels-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.level {
+    background: #ffffff;
+    padding: 25px;
+    margin-bottom: 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 300px; /* Flex properties for responsiveness */
+    max-width: 350px;
+}
+.level:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+.level h2 {
+    color: #004d40; /* Dark Teal */
+    border-bottom: 2px solid #b2dfdb; /* Light Teal */
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+.resources h3 {
+    color: #00796b; /* Teal */
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+.resources ul {
+    list-style: none;
+    padding: 0;
+}
+.resources ul li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+}
+.resources ul li::before {
+    content: '➔';
+    position: absolute;
+    left: 0;
+    color: #00796b; /* Teal */
+}
+.resources a {
+    text-decoration: none;
+    color: #0277bd; /* Light Blue */
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.resources a:hover, .resources a:focus {
+    color: #004c8c; /* Darker Blue */
+    text-decoration: underline;
+}
+footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    background: #004d40; /* Dark Teal */
+    color: #e0f2f1; /* Light Teal Tint */
+    width: 100%;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+    .levels-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .level {
+        width: 100%;
+        max-width: none;
+    }
+}
