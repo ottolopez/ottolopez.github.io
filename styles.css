@@ -195,3 +195,75 @@ body.dark-mode #theme-toggle {
     background-color: #bb86fc; /* Purple */
     color: #121212;
 }
+/* Testimonials Section */
+#testimonials {
+    padding: 2rem 0;
+}
+
+#testimonials h2 {
+    text-align: center;
+    color: #004d40;
+    margin-bottom: 2rem;
+}
+
+.testimonials-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.testimonial-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex: 1 1 300px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: #555;
+    flex-grow: 1;
+}
+
+.student-info {
+    margin-top: 15px;
+    text-align: right;
+}
+
+.student-name {
+    display: block;
+    font-weight: bold;
+    color: #004d40;
+}
+
+.student-level {
+    font-size: 0.9rem;
+    color: #00796b;
+}
+
+/* Dark Mode for Testimonials */
+body.dark-mode #testimonials h2 {
+    color: #bb86fc;
+}
+
+body.dark-mode .testimonial-card {
+    background: #1e1e1e;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+body.dark-mode .testimonial-card p {
+    color: #e0e0e0;
+}
+
+body.dark-mode .student-name {
+    color: #bb86fc;
+}
+
+body.dark-mode .student-level {
+    color: #8ab4f8;
+}
