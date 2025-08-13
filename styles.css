@@ -125,6 +125,45 @@ footer {
     width: 100%;
 }
 /* Responsive Design */
+#featured-resource {
+    background: #e0f2f1; /* Light Teal Tint */
+    padding: 20px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+#featured-resource h2 {
+    color: #004d40; /* Dark Teal */
+    margin-top: 0;
+}
+#featured-resource-content a {
+    text-decoration: none;
+    color: #01579b; /* Darker Blue */
+    font-weight: 700;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+#featured-resource-content a:hover, #featured-resource-content a:focus {
+    color: #002f6c; /* Even Darker Blue */
+    text-decoration: underline;
+}
+body.dark-mode #featured-resource {
+    background: #1e1e1e;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+body.dark-mode #featured-resource h2 {
+    color: #bb86fc;
+}
+body.dark-mode #featured-resource-content a {
+    color: #8ab4f8;
+}
+body.dark-mode #featured-resource-content a:hover, body.dark-mode #featured-resource-content a:focus {
+    color: #a9c7ff;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     .container {
         width: 95%;

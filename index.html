@@ -18,6 +18,11 @@
     <main class="container">
         <p>Welcome to our free English academy! Here you will find all the resources you need to improve your English skills. All materials are free to use and share.</p>
 
+        <section id="featured-resource" class="container">
+            <h2>Random Featured Resource</h2>
+            <div id="featured-resource-content"></div>
+        </section>
+
         <div class="levels-container">
             <section id="beginner" class="level">
                 <h2>Beginner Level</h2>
@@ -139,6 +144,15 @@
         // Check for saved theme preference
         if (localStorage.getItem('theme') === 'dark') {
             body.classList.add('dark-mode');
+        }
+
+        // Select and display a random featured resource
+        const resources = document.querySelectorAll('.resources a');
+        const featuredResourceContent = document.getElementById('featured-resource-content');
+        if (resources.length > 0) {
+            const randomIndex = Math.floor(Math.random() * resources.length);
+            const randomResource = resources[randomIndex].cloneNode(true);
+            featuredResourceContent.appendChild(randomResource);
         }
     </script>
 </body>
