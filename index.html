@@ -76,5 +76,24 @@
             <p>&copy; 2024 Free English Academy. All Rights Reserved.</p>
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const levels = document.querySelectorAll('.level');
+
+            levels.forEach(level => {
+                const title = level.querySelector('h2');
+                title.addEventListener('click', () => {
+                    // Close all other levels
+                    levels.forEach(otherLevel => {
+                        if (otherLevel !== level) {
+                            otherLevel.classList.remove('active');
+                        }
+                    });
+                    // Toggle the clicked level
+                    level.classList.toggle('active');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
