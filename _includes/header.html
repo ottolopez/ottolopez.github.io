@@ -1,6 +1,10 @@
 <header>
     <div class="container">
         <h1>{{ site.title }}</h1>
+        <nav>
+            <a href="{{ "/" | relative_url }}">Home</a>
+            <a href="{{ "/resources.html" | relative_url }}">Class Resources</a>
+        </nav>
         <button id="theme-toggle" aria-label="Toggle color theme">Toggle Dark Mode</button>
     </div>
 </header>
