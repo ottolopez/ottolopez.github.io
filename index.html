@@ -3,11 +3,17 @@ layout: default
 title: Home
 ---
 
-<p>Welcome to our free English academy! Here you will find all the resources you need to improve your English skills. All materials are free to use and share.</p>
+<section class="hero">
+    <div class="container">
+        <h2>Welcome to the Free English Academy</h2>
+        <p>Your journey to fluency starts here. Explore our resources and join our community.</p>
+        <a href="{{ "/resources.html" | relative_url }}" class="button">Browse Resources</a>
+    </div>
+</section>
 
 <section id="this-weeks-class" class="container">
-    <h2>This Week's Class</h2>
-    <div class="class-details">
+    <div class="card">
+        <h2>This Week's Class</h2>
         <h3>Topic: {{ site.data.class.topic }}</h3>
         <p><strong>Date:</strong> {{ site.data.class.date }}</p>
         <p><strong>Time:</strong> {{ site.data.class.time }}</p>
@@ -15,30 +21,24 @@ title: Home
     </div>
 </section>
 
-<section id="past-resources" class="container">
-    <h2>Past Class Resources</h2>
-    <p>All the materials from our previous classes are available here. Feel free to browse and use them to practice your English.</p>
-    <a href="{{ "/resources.html" | relative_url }}" class="button">View Resources</a>
-</section>
-
 <section id="testimonials" class="container">
     <h2>What Our Students Say</h2>
     <div class="testimonials-container">
-        <div class="testimonial-card">
+        <div class="testimonial-card card">
             <p>"This academy has been a game-changer for me. The lessons are easy to follow, and I've seen a huge improvement in my English skills."</p>
             <div class="student-info">
                 <span class="student-name">John Doe</span>
                 <span class="student-level">Intermediate</span>
             </div>
         </div>
-        <div class="testimonial-card">
+        <div class="testimonial-card card">
             <p>"I love the variety of resources available. The quizzes are especially helpful for testing my knowledge."</p>
             <div class="student-info">
                 <span class="student-name">Jane Smith</span>
                 <span class="student-level">Advanced</span>
             </div>
         </div>
-        <div class="testimonial-card">
+        <div class="testimonial-card card">
             <p>"As a beginner, I found the worksheets very helpful. I'm much more confident in my English now."</p>
             <div class="student-info">
                 <span class="student-name">Peter Jones</span>

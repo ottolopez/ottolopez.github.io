@@ -1,20 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const levels = document.querySelectorAll('.level');
-
-    levels.forEach(level => {
-        const title = level.querySelector('h2');
-        title.addEventListener('click', () => {
-            // Close all other levels
-            levels.forEach(otherLevel => {
-                if (otherLevel !== level) {
-                    otherLevel.classList.remove('active');
-                }
-            });
-            // Toggle the clicked level
-            level.classList.toggle('active');
-        });
-    });
-
+    // Theme Toggle
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
 
@@ -22,22 +7,45 @@ document.addEventListener('DOMContentLoaded', () => {
         body.classList.toggle('dark-mode');
         if (body.classList.contains('dark-mode')) {
             localStorage.setItem('theme', 'dark');
+            themeToggle.textContent = '☀️';
         } else {
-            localStorage.removeItem('theme');
+            localStorage.setItem('theme', 'light');
+            themeToggle.textContent = '🌙';
         }
     });
 
     // Check for saved theme preference
     if (localStorage.getItem('theme') === 'dark') {
         body.classList.add('dark-mode');
+        themeToggle.textContent = '☀️';
+    } else {
+        body.classList.remove('dark-mode');
+        themeToggle.textContent = '🌙';
     }
 
-    // Select and display a random featured resource
-    const resources = document.querySelectorAll('.resources a');
-    const featuredResourceContent = document.getElementById('featured-resource-content');
-    if (resources.length > 0) {
-        const randomIndex = Math.floor(Math.random() * resources.length);
-        const randomResource = resources[randomIndex].cloneNode(true);
-        featuredResourceContent.appendChild(randomResource);
+    // Accordion for resources page
+    const levels = document.querySelectorAll('.level');
+    levels.forEach(level => {
+        const title = level.querySelector('.level-title');
+        title.addEventListener('click', () => {
+            level.classList.toggle('active');
+        });
+    });
+
+    // Search functionality for resources page
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) {
+        searchInput.addEventListener('keyup', () => {
+            const filter = searchInput.value.toLowerCase();
+            const resources = document.querySelectorAll('.level .resources li');
+            resources.forEach(resource => {
+                const text = resource.textContent.toLowerCase();
+                if (text.includes(filter)) {
+                    resource.style.display = '';
+                } else {
+                    resource.style.display = 'none';
+                }
+            });
+        });
     }
 });

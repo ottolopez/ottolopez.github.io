@@ -1,0 +1,289 @@
+.button {
+    background-color: $primary-color;
+    color: $white;
+    padding: ($spacing-unit * 0.8) ($spacing-unit * 1.5);
+    border: none;
+    border-radius: $border-radius;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+        background-color: darken($primary-color, 10%);
+        transform: translateY(-2px);
+    }
+}
+
+.card {
+    background: $white;
+    padding: ($spacing-unit * 1.5);
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: $box-shadow-hover;
+    }
+}
+
+#theme-toggle {
+    background-color: $secondary-color;
+    border: none;
+    color: $white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: $border-radius;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+
+    &:hover {
+        background-color: darken($secondary-color, 10%);
+    }
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    .button {
+        background-color: $dark-primary-color;
+        color: $dark-background-color;
+
+        &:hover {
+            background-color: lighten($dark-primary-color, 10%);
+        }
+    }
+
+    .card {
+        background: $dark-surface-color;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    #theme-toggle {
+        background-color: $dark-primary-color;
+        color: $dark-background-color;
+
+        &:hover {
+            background-color: lighten($dark-primary-color, 10%);
+        }
+    }
+}
+
+.levels-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.level {
+    background: $white;
+    padding: 25px;
+    margin-bottom: 0;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 300px; /* Flex properties for responsiveness */
+    max-width: 350px;
+}
+
+.level:hover {
+    transform: translateY(-5px);
+    box-shadow: $box-shadow-hover;
+}
+
+.level h2 {
+    color: $primary-color;
+    border-bottom: 2px solid lighten($primary-color, 30%);
+    padding-bottom: 10px;
+    margin-top: 0;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+}
+
+.level h2::after {
+    content: '+';
+    position: absolute;
+    right: 10px;
+    font-size: 1.5rem;
+    color: $primary-color;
+    transition: transform 0.3s ease;
+}
+
+.level.active h2::after {
+    transform: rotate(45deg);
+    content: '−';
+}
+
+.resources {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+.level.active .resources {
+    max-height: 500px; /* Adjust this value if content is taller */
+}
+
+.resources h3 {
+    color: $primary-color;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.resources ul li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.resources ul li::before {
+    content: '➔';
+    position: absolute;
+    left: 0;
+    color: $primary-color;
+}
+
+.resources a {
+    font-weight: 500;
+}
+
+#featured-resource {
+    background: lighten($primary-color, 40%);
+    padding: 20px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: $border-radius;
+    text-align: center;
+    box-shadow: $box-shadow;
+}
+
+#featured-resource h2 {
+    color: $primary-color;
+    margin-top: 0;
+}
+
+#featured-resource-content a {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+#testimonials {
+    padding: 2rem 0;
+}
+
+#testimonials h2 {
+    text-align: center;
+    color: $primary-color;
+    margin-bottom: 2rem;
+}
+
+.testimonials-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.testimonial-card {
+    background: $white;
+    padding: 20px;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    flex: 1 1 300px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: $dark-gray;
+    flex-grow: 1;
+}
+
+.student-info {
+    margin-top: 15px;
+    text-align: right;
+}
+
+.student-name {
+    display: block;
+    font-weight: bold;
+    color: $primary-color;
+}
+
+.student-level {
+    font-size: 0.9rem;
+    color: $secondary-color;
+}
+
+body.dark-mode {
+    .level {
+        background: $dark-surface-color;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    }
+
+    .level h2 {
+        color: $dark-primary-color;
+        border-bottom-color: lighten($dark-surface-color, 10%);
+    }
+
+    .level h2::after {
+        color: $dark-primary-color;
+    }
+
+    .resources h3 {
+        color: $dark-primary-color;
+    }
+
+    .resources a {
+        color: $dark-secondary-color;
+    }
+
+    .resources ul li::before {
+        color: $dark-primary-color;
+    }
+
+    #featured-resource {
+        background: $dark-surface-color;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    }
+
+    #featured-resource h2 {
+        color: $dark-primary-color;
+    }
+
+    #featured-resource-content a {
+        color: $dark-secondary-color;
+    }
+
+    #testimonials h2 {
+        color: $dark-primary-color;
+    }
+
+    .testimonial-card {
+        background: $dark-surface-color;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    }
+
+    .testimonial-card p {
+        color: $dark-text-color;
+    }
+
+    .student-name {
+        color: $dark-primary-color;
+    }
+
+    .student-level {
+        color: $dark-secondary-color;
+    }
+}

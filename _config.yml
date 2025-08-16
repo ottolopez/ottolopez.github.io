@@ -2,3 +2,7 @@ title: Free English Academy
 description: Your one-stop resource for learning English online. We offer free worksheets, quizzes, and materials for beginner, intermediate, and advanced learners.
 markdown: kramdown
 theme: jekyll-theme-minimal
+
+sass:
+  sass_dir: _sass
+  style: compressed
