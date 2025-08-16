@@ -5,32 +5,21 @@ title: Home
 
 <p>Welcome to our free English academy! Here you will find all the resources you need to improve your English skills. All materials are free to use and share.</p>
 
-<section id="featured-resource" class="container">
-    <h2>Random Featured Resource</h2>
-    <div id="featured-resource-content"></div>
+<section id="this-weeks-class" class="container">
+    <h2>This Week's Class</h2>
+    <div class="class-details">
+        <h3>Topic: {{ site.data.class.topic }}</h3>
+        <p><strong>Date:</strong> {{ site.data.class.date }}</p>
+        <p><strong>Time:</strong> {{ site.data.class.time }}</p>
+        <a href="{{ site.data.class.meet_link }}" class="button" target="_blank">Join the Class</a>
+    </div>
 </section>
 
-<div class="levels-container">
-    {% for level in site.data.resources %}
-    <section id="{{ level[0] }}" class="level">
-        <h2>{{ level[0] | capitalize }} Level</h2>
-        <div class="resources">
-            <h3>Worksheets</h3>
-            <ul>
-                {% for worksheet in level[1].worksheets %}
-                <li><a href="{{ worksheet.url }}" target="_blank" aria-label="{{ level[0] | capitalize }} Level Worksheet: {{ worksheet.title }}">{{ worksheet.title }}</a></li>
-                {% endfor %}
-            </ul>
-            <h3>Quizzes</h3>
-            <ul>
-                {% for quiz in level[1].quizzes %}
-                <li><a href="{{ quiz.url }}" target="_blank" aria-label="{{ level[0] | capitalize }} Level Quiz: {{ quiz.title }}">{{ quiz.title }}</a></li>
-                {% endfor %}
-            </ul>
-        </div>
-    </section>
-    {% endfor %}
-</div>
+<section id="past-resources" class="container">
+    <h2>Past Class Resources</h2>
+    <p>All the materials from our previous classes are available here. Feel free to browse and use them to practice your English.</p>
+    <a href="{{ "/resources.html" | relative_url }}" class="button">View Resources</a>
+</section>
 
 <section id="testimonials" class="container">
     <h2>What Our Students Say</h2>
