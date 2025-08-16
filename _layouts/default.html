@@ -10,10 +10,11 @@
 </head>
 <body>
     {% include header.html %}
-    <main class="container">
+    <main>
         {{ content }}
     </main>
     {% include footer.html %}
+    <button id="theme-toggle" aria-label="Toggle color theme">🌙</button>
     <script src="{{ "/assets/js/main.js" | relative_url }}"></script>
 </body>
 </html>

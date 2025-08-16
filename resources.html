@@ -1,16 +1,35 @@
 ---
 layout: default
-title: Class Resources
+title: Resources
 ---
 
-<h1>Class Resources</h1>
+<section class="container">
+    <h2>Our Resources</h2>
+    <p>Browse our collection of worksheets, quizzes, and other materials to help you learn English.</p>
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-      <p>{{ post.excerpt }}</p>
-      <p><small>Posted on {{ post.date | date: "%B %d, %Y" }}</small></p>
-    </li>
-  {% endfor %}
-</ul>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for resources...">
+    </div>
+
+    <div class="levels-container">
+        {% for level in site.data.levels %}
+        <div class="level card">
+            <h2 class="level-title">{{ level.title }}</h2>
+            <div class="resources">
+                <h3>Worksheets</h3>
+                <ul>
+                    {% for worksheet in level.worksheets %}
+                    <li><a href="{{ worksheet.url }}">{{ worksheet.title }}</a></li>
+                    {% endfor %}
+                </ul>
+                <h3>Quizzes</h3>
+                <ul>
+                    {% for quiz in level.quizzes %}
+                    <li><a href="{{ quiz.url }}">{{ quiz.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>

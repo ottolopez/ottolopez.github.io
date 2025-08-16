@@ -1,0 +1,33 @@
+// Font Imports
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
+
+// Font Stacks
+$font-primary: 'Poppins', sans-serif;
+$font-secondary: 'Lora', serif;
+
+// Color Palette
+$primary-color: #6a11cb;
+$secondary-color: #2575fc;
+$background-color: #f4f7f6;
+$text-color: #333;
+$light-gray: #f2f2f2;
+$dark-gray: #555;
+$white: #fff;
+$black: #000;
+
+// Dark Mode Colors
+$dark-background-color: #121212;
+$dark-text-color: #e0e0e0;
+$dark-primary-color: #bb86fc;
+$dark-secondary-color: #03dac6;
+$dark-surface-color: #1e1e1e;
+
+// Spacing
+$spacing-unit: 1rem;
+
+// Borders
+$border-radius: 8px;
+
+// Shadows
+$box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+$box-shadow-hover: 0 6px 12px rgba(0, 0, 0, 0.15);

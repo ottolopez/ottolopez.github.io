@@ -1,0 +1,47 @@
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $spacing-unit;
+}
+
+header {
+    background: linear-gradient(90deg, $primary-color, $secondary-color);
+    color: $white;
+    padding: ($spacing-unit * 2) 0;
+    text-align: center;
+    box-shadow: $box-shadow;
+
+    h1 {
+        margin: 0;
+        font-size: 3rem;
+        color: $white;
+    }
+}
+
+main {
+    padding: ($spacing-unit * 2) 0;
+    flex-grow: 1;
+}
+
+footer {
+    text-align: center;
+    padding: ($spacing-unit * 2) 0;
+    background: darken($background-color, 5%);
+    color: $dark-gray;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    header {
+        background: $dark-surface-color;
+        box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+    }
+
+    footer {
+        background: $dark-surface-color;
+        color: lighten($dark-text-color, 20%);
+    }
+}
