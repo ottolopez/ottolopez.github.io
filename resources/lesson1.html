@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 1: Greetings and Introductions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom styles for the scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        /* Simple animation for section loading */
+        .section-fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.8s forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Flashcard styles */
+        .flashcard-container {
+            perspective: 1000px;
+        }
+        .flashcard {
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+        .flashcard.is-flipped {
+            transform: rotateY(180deg);
+        }
+        .flashcard-face {
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+        .flashcard-back {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div>
+                <h1 class="text-2xl md:text-3xl font-bold text-blue-600">ESL Lesson 1</h1>
+                <p id="dynamic-greeting" class="text-gray-500 text-sm md:text-base">Greetings and Introductions</p>
+            </div>
+            <nav class="hidden md:flex space-x-4 items-center">
+                <a href="#dialogue" class="text-gray-600 hover:text-blue-600 transition duration-300">Dialogue</a>
+                <a href="#pronunciation" class="text-gray-600 hover:text-blue-600 transition duration-300">Pronunciation</a>
+                <a href="#grammar" class="text-gray-600 hover:text-blue-600 transition duration-300">Grammar</a>
+                <a href="#vocabulary" class="text-gray-600 hover:text-blue-600 transition duration-300">Vocabulary</a>
+                <a href="#exercises" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition duration-300">Exercises</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <a href="#dialogue" class="block py-2 px-6 text-sm text-gray-700 hover:bg-gray-100">Dialogue</a>
+            <a href="#pronunciation" class="block py-2 px-6 text-sm text-gray-700 hover:bg-gray-100">Pronunciation</a>
+            <a href="#grammar" class="block py-2 px-6 text-sm text-gray-700 hover:bg-gray-100">Grammar</a>
+            <a href="#vocabulary" class="block py-2 px-6 text-sm text-gray-700 hover:bg-gray-100">Vocabulary</a>
+            <a href="#exercises" class="block py-2 px-6 text-sm text-gray-700 hover:bg-gray-100">Exercises</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Dialogue Section -->
+        <section id="dialogue" class="mb-16 section-fade-in">
+            <h2 class="text-3xl font-bold mb-6 border-l-4 border-blue-500 pl-4 flex items-center"><i class="fas fa-comments mr-3 text-blue-500"></i>A. Dialogue / Diálogo</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold mb-4 text-gray-700">At a new job. / En un nuevo trabajo.</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-bold text-lg mb-2 text-blue-600">English</h4>
+                        <div class="space-y-2">
+                            <p><strong class="text-gray-800">Maria:</strong> Hi, Leo. How's it going? <button class="play-audio-btn text-blue-500 hover:text-blue-700" data-text="Hi, Leo. How's it going?"><i class="fas fa-volume-up"></i></button></p>
+                            <p><strong class="text-gray-800">Leo:</strong> Good morning, Maria. I'm doing well, thank you. How about you? <button class="play-audio-btn text-blue-500 hover:text-blue-700" data-text="Good morning, Maria. I'm doing well, thank you. How about you?"><i class="fas fa-volume-up"></i></button></p>
+                            <p><strong class="text-gray-800">Maria:</strong> I'm great! Leo, I'd like you to meet Sofia. She's a new graphic designer on our team. <button class="play-audio-btn text-blue-500 hover:text-blue-700" data-text="I'm great! Leo, I'd like you to meet Sofia. She's a new graphic designer on our team."><i class="fas fa-volume-up"></i></button></p>
+                            <p><strong class="text-gray-800">Leo:</strong> Oh, hello! It's a pleasure to meet you, Sofia. <button class="play-audio-btn text-blue-500 hover:text-blue-700" data-text="Oh, hello! It's a pleasure to meet you, Sofia."><i class="fas fa-volume-up"></i></button></p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-2 text-green-600">Español</h4>
+                        <div class="space-y-2">
+                            <p><strong class="text-gray-800">Maria:</strong> Hola, Leo. ¿Qué tal?</p>
+                            <p><strong class="text-gray-800">Leo:</strong> Buenos días, María. Estoy bien, gracias. ¿Y tú?</p>
+                            <p><strong class="text-gray-800">Maria:</strong> ¡Estoy muy bien! Leo, te presento a Sofía. Es la nueva diseñadora gráfica de nuestro equipo.</p>
+                            <p><strong class="text-gray-800">Leo:</strong> ¡Ah, hola! Un placer conocerte, Sofía.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pronunciation Section -->
+        <section id="pronunciation" class="mb-16 section-fade-in" style="animation-delay: 0.2s;">
+            <h2 class="text-3xl font-bold mb-6 border-l-4 border-blue-500 pl-4 flex items-center"><i class="fas fa-bullhorn mr-3 text-blue-500"></i>B. Pronunciation / Pronunciación</h2>
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-700">Vowels (Vocales)</h3>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full bg-white">
+                            <thead class="bg-gray-100">
+                                <tr>
+                                    <th class="py-2 px-4 border-b">Letter</th>
+                                    <th class="py-2 px-4 border-b">Sound Description</th>
+                                    <th class="py-2 px-4 border-b">Example Words</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="py-2 px-4 border-b text-center font-bold">a</td><td class="py-2 px-4 border-b">Like the "a" in the Spanish word *padre*.</td><td class="py-2 px-4 border-b">c<strong>a</strong>t, m<strong>a</strong>p, <strong>a</strong>nd</td></tr>
+                                <tr><td class="py-2 px-4 border-b text-center font-bold">e</td><td class="py-2 px-4 border-b">Similar to the "e" in *café*, but shorter.</td><td class="py-2 px-4 border-b">r<strong>e</strong>d, t<strong>e</strong>n, p<strong>e</strong>n</td></tr>
+                                <tr><td class="py-2 px-4 border-b text-center font-bold">i</td><td class="py-2 px-4 border-b">A short sound, similar to the "i" in *cine*.</td><td class="py-2 px-4 border-b">b<strong>i</strong>g, s<strong>i</strong>t, <strong>i</strong>s</td></tr>
+                                <tr><td class="py-2 px-4 border-b text-center font-bold">o</td><td class="py-2 px-4 border-b">A longer sound, like the "o" in *oso*.</td><td class="py-2 px-4 border-b">g<strong>o</strong>, n<strong>o</strong>, hell<strong>o</strong></td></tr>
+                                <tr><td class="py-2 px-4 border-b text-center font-bold">u</td><td class="py-2 px-4 border-b">Sounds like the two vowels "i-u" together.</td><td class="py-2 px-4 border-b"><strong>u</strong>se, c<strong>u</strong>te, m<strong>u</strong>sic</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Grammar Section -->
+        <section id="grammar" class="mb-16 section-fade-in" style="animation-delay: 0.4s;">
+            <h2 class="text-3xl font-bold mb-6 border-l-4 border-blue-500 pl-4 flex items-center"><i class="fas fa-book mr-3 text-blue-500"></i>C. Grammar / Gramática</h2>
+            <div class="space-y-6">
+                <!-- Personal Subject Pronouns -->
+                <details class="bg-white p-6 rounded-lg shadow-lg group" open>
+                    <summary class="font-semibold text-xl cursor-pointer text-gray-700 group-hover:text-blue-600 list-none flex justify-between items-center">Personal Subject Pronouns <i class="fas fa-chevron-down transform group-open:rotate-180 transition-transform"></i></summary>
+                    <div class="overflow-x-auto mt-4">
+                        <table class="min-w-full bg-white border">
+                             <tbody>
+                                <tr><td class="py-2 px-4 border-b font-bold">I</td><td class="py-2 px-4 border-b">yo</td></tr>
+                                <tr><td class="py-2 px-4 border-b font-bold">You</td><td class="py-2 px-4 border-b">tú, usted / ustedes, vosotros/as</td></tr>
+                                <tr><td class="py-2 px-4 border-b font-bold">He</td><td class="py-2 px-4 border-b">él</td></tr>
+                                <tr><td class="py-2 px-4 border-b font-bold">She</td><td class="py-2 px-4 border-b">ella</td></tr>
+                                <tr><td class="py-2 px-4 border-b font-bold">It</td><td class="py-2 px-4 border-b">(for things, ideas, animals)</td></tr>
+                                <tr><td class="py-2 px-4 border-b font-bold">We</td><td class="py-2 px-4 border-b">nosotros/as</td></tr>
+                                <tr><td class="py-2 px-4 border-b font-bold">They</td><td class="py-2 px-4 border-b">ellos/as</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Vocabulary Section -->
+        <section id="vocabulary" class="mb-16 section-fade-in" style="animation-delay: 0.6s;">
+            <h2 class="text-3xl font-bold mb-6 border-l-4 border-blue-500 pl-4 flex items-center"><i class="fas fa-layer-group mr-3 text-blue-500"></i>D. Vocabulary / Vocabulario</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="flashcard-container h-32"><div class="flashcard relative w-full h-full"><div class="flashcard-face absolute w-full h-full bg-white rounded-lg shadow-lg flex items-center justify-center p-4 text-center font-semibold text-blue-700">Hi / Hello</div><div class="flashcard-face flashcard-back absolute w-full h-full bg-blue-500 rounded-lg shadow-lg flex items-center justify-center p-4 text-center font-semibold text-white">Hola</div></div></div>
+                <div class="flashcard-container h-32"><div class="flashcard relative w-full h-full"><div class="flashcard-face absolute w-full h-full bg-white rounded-lg shadow-lg flex items-center justify-center p-4 text-center font-semibold text-blue-700">Good morning</div><div class="flashcard-face flashcard-back absolute w-full h-full bg-blue-500 rounded-lg shadow-lg flex items-center justify-center p-4 text-center font-semibold text-white">Buenos días</div></div></div>
+                <div class="flashcard-container h-32"><div class="flashcard relative w-full h-full"><div class="flashcard-face absolute w-full h-full bg-white rounded-lg shadow-lg flex items-center justify-center p-4 text-center font-semibold text-blue-700">How's it going?</div><div class="flashcard-face flashcard-back absolute w-full h-full bg-blue-500 rounded-lg shadow-lg flex items-center justify-center p-4 text-center font-semibold text-white">¿Qué tal?</div></div></div>
+                <div class="flashcard-container h-32"><div class="flashcard relative w-full h-full"><div class="flashcard-face absolute w-full h-full bg-white rounded-lg shadow-lg flex items-center justify-center p-4 text-center font-semibold text-blue-700">Thank you</div><div class="flashcard-face flashcard-back absolute w-full h-full bg-blue-500 rounded-lg shadow-lg flex items-center justify-center p-4 text-center font-semibold text-white">Gracias</div></div></div>
+            </div>
+        </section>
+
+        <!-- Exercises Section -->
+        <section id="exercises" class="mb-16 section-fade-in" style="animation-delay: 0.8s;">
+            <h2 class="text-3xl font-bold mb-6 border-l-4 border-blue-500 pl-4 flex items-center"><i class="fas fa-pencil-alt mr-3 text-blue-500"></i>E. Exercises / Ejercicios</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <div class="mb-6">
+                    <label for="studentName" class="block text-lg font-medium text-gray-700 mb-2">Enter Your Full Name:</label>
+                    <input type="text" id="studentName" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="e.g., Jane Doe">
+                    <p id="name-error" class="text-red-500 text-sm mt-1 hidden">Please enter your name before starting.</p>
+                </div>
+
+                <form id="quizForm" class="space-y-8">
+                    <!-- Exercise A -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">A. Complete with "to be" (*am, is, are*).</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-2"><span>1. I</span><select id="qA1" class="p-2 border rounded"><option value="">--</option><option value="am">am</option><option value="is">is</option><option value="are">are</option></select><span>a student.</span><span class="feedback-icon"></span></div>
+                            <div class="flex items-center space-x-2"><span>2. She</span><select id="qA2" class="p-2 border rounded"><option value="">--</option><option value="am">am</option><option value="is">is</option><option value="are">are</option></select><span>from Argentina.</span><span class="feedback-icon"></span></div>
+                        </div>
+                    </div>
+                    <!-- Exercise B -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">B. Rewrite using a pronoun and contraction.</h3>
+                        <div class="space-y-4">
+                            <div><p>1. I am from Colombia.</p><select id="qB1" class="p-2 border rounded w-full md:w-auto"><option value="">--</option><option value="Im from Colombia.">I'm from Colombia.</option><option value="Hes from Colombia.">He's from Colombia.</option></select><span class="feedback-icon ml-2"></span></div>
+                            <div><p>2. Leo is the project manager.</p><select id="qB2" class="p-2 border rounded w-full md:w-auto"><option value="">--</option><option value="Shes the project manager.">She's the project manager.</option><option value="Hes the project manager.">He's the project manager.</option></select><span class="feedback-icon ml-2"></span></div>
+                        </div>
+                    </div>
+                    <button type="button" id="gradeButton" class="w-full bg-green-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-700 transition duration-300 text-lg">Grade My Answers</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white mt-16 border-t">
+        <div class="container mx-auto px-6 py-4 text-center text-gray-500">
+            <p>&copy; 2025 ESL Learning Portal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Results Modal -->
+    <div id="resultsModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-lg shadow-2xl p-8 max-w-md w-full transform transition-all scale-95 opacity-0" id="modal-content">
+            <h2 class="text-2xl font-bold mb-4 text-center">Your Results</h2>
+            <p class="text-center text-lg mb-2" id="student-name-result"></p>
+            <div class="text-center my-6">
+                <p class="text-5xl font-bold text-blue-600" id="final-score"></p>
+                <p class="text-gray-600" id="score-details"></p>
+            </div>
+            <p class="text-center text-sm text-gray-500 mb-6">Please take a screenshot of this result for your records.</p>
+            <button id="closeModal" class="w-full bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // --- Interactive Elements ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+        const greetingElement = document.getElementById('dynamic-greeting');
+        const currentHour = new Date().getHours();
+        greetingElement.textContent = currentHour < 12 ? 'Good Morning! Let\'s learn.' : currentHour < 18 ? 'Good Afternoon! Let\'s learn.' : 'Good Evening! Let\'s learn.';
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+                if (!mobileMenu.classList.contains('hidden')) mobileMenu.classList.add('hidden');
+            });
+        });
+
+        document.querySelectorAll('.flashcard').forEach(card => {
+            card.addEventListener('click', () => card.classList.toggle('is-flipped'));
+        });
+
+        // --- Text-to-Speech for Dialogue ---
+        const audioButtons = document.querySelectorAll('.play-audio-btn');
+        const synth = window.speechSynthesis;
+        audioButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const textToSpeak = button.getAttribute('data-text');
+                const utterance = new SpeechSynthesisUtterance(textToSpeak);
+                utterance.lang = 'en-US';
+                synth.speak(utterance);
+            });
+        });
+
+        // --- Auto-Grading Logic ---
+        const gradeButton = document.getElementById('gradeButton');
+        const resultsModal = document.getElementById('resultsModal');
+        const modalContent = document.getElementById('modal-content');
+        const closeModalButton = document.getElementById('closeModal');
+        const studentNameInput = document.getElementById('studentName');
+        const nameError = document.getElementById('name-error');
+
+        const correctAnswers = {
+            qA1: 'am', qA2: 'is',
+            qB1: 'Im from Colombia.', qB2: 'Hes the project manager.'
+        };
+        const totalQuestions = Object.keys(correctAnswers).length;
+
+        gradeButton.addEventListener('click', () => {
+            const studentName = studentNameInput.value.trim();
+            if (studentName === '') {
+                nameError.classList.remove('hidden');
+                studentNameInput.focus();
+                return;
+            }
+            nameError.classList.add('hidden');
+
+            let score = 0;
+            document.querySelectorAll('.feedback-icon').forEach(icon => icon.innerHTML = ''); // Clear previous feedback
+
+            for (const questionId in correctAnswers) {
+                const selectElement = document.getElementById(questionId);
+                const feedbackIcon = selectElement.parentElement.querySelector('.feedback-icon');
+                if (selectElement.value === correctAnswers[questionId]) {
+                    score++;
+                    feedbackIcon.innerHTML = '<i class="fas fa-check-circle text-green-500"></i>';
+                } else {
+                    feedbackIcon.innerHTML = '<i class="fas fa-times-circle text-red-500"></i>';
+                }
+            }
+
+            const percentage = Math.round((score / totalQuestions) * 100);
+            document.getElementById('student-name-result').textContent = `Student: ${studentName}`;
+            document.getElementById('final-score').textContent = `${percentage}%`;
+            document.getElementById('score-details').textContent = `You answered ${score} out of ${totalQuestions} correctly.`;
+
+            const finalScoreEl = document.getElementById('final-score');
+            finalScoreEl.className = 'text-5xl font-bold'; // Reset classes
+            if (percentage >= 80) finalScoreEl.classList.add('text-green-600');
+            else if (percentage >= 50) finalScoreEl.classList.add('text-yellow-600');
+            else finalScoreEl.classList.add('text-red-600');
+
+            resultsModal.classList.remove('hidden');
+            setTimeout(() => modalContent.classList.remove('scale-95', 'opacity-0'), 50);
+        });
+
+        const closeModal = () => {
+            modalContent.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => resultsModal.classList.add('hidden'), 300);
+        };
+        closeModalButton.addEventListener('click', closeModal);
+        resultsModal.addEventListener('click', (e) => {
+            if (e.target === resultsModal) closeModal();
+        });
+    </script>
+</body>
+</html>
