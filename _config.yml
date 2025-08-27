@@ -4,5 +4,5 @@ markdown: kramdown
 theme: jekyll-theme-minimal
 
 sass:
-  sass_dir: _sass
+  sass_dir: english/_sass
   style: compressed
