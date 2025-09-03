@@ -91,7 +91,7 @@ def generate_index_for_dir(dir_path):
 
 def main():
     """Walk through directories and generate index files."""
-    excluded_dirs = ['.git', '.github', 'jules-scratch']
+    excluded_dirs = ['.git', '.github', 'jules-scratch', 'bible']
     for root, dirs, _ in os.walk('.', topdown=True):
         dirs[:] = [d for d in dirs if d not in excluded_dirs]
         generate_index_for_dir(root)
