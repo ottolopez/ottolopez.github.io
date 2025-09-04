@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 1 Presentation: Greetings and Introductions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+        }
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 5rem 2rem;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            transform: scale(0.98);
+            overflow-y: auto;
+        }
+        .slide.active {
+            opacity: 1;
+            transform: scale(1);
+            z-index: 10;
+        }
+        .slide.previous {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+        .slide.active .animated-item {
+            opacity: 0;
+            transform: translateY(25px);
+            animation: fadeInUp 0.5s forwards;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .flashcard-container { perspective: 1000px; }
+        .flashcard { transition: transform 0.6s; transform-style: preserve-3d; cursor: pointer; }
+        .flashcard.is-flipped { transform: rotateY(180deg); }
+        .flashcard-face { backface-visibility: hidden; }
+        .flashcard-back { transform: rotateY(180deg); }
+        .dialogue-line { cursor: pointer; transition: background-color 0.3s; }
+        .dialogue-line:hover { background-color: #f0f4f8; }
+        .corner-logo {
+            position: absolute;
+            top: 1.5rem;
+            left: 1.5rem;
+            font-weight: bold;
+            color: #9ca3af; /* gray-400 */
+        }
+    </style>
+</head>
+<body class="bg-gray-200">
+    <div id="presentation-container" class="relative w-full h-screen">
+
+        <!-- Slide 1: Title -->
+        <div class="slide active bg-gradient-to-br from-blue-600 to-indigo-700 text-white">
+            <h1 class="text-5xl md:text-7xl font-black animated-item">Lesson 1</h1>
+            <p class="text-2xl md:text-4xl mt-4 animated-item" style="animation-delay: 0.2s;">Greetings & Introductions</p>
+            <p class="mt-8 text-lg text-blue-200 animated-item" style="animation-delay: 0.4s;">Click the arrows to navigate</p>
+        </div>
+
+        <!-- Slide 2: Objectives -->
+        <div class="slide bg-white">
+            <div class="corner-logo">ESL L1</div>
+            <h2 class="text-4xl font-bold text-gray-800 mb-8 animated-item"><i class="fas fa-bullseye mr-3 text-blue-500"></i>Today's Goals</h2>
+            <ul class="space-y-4 text-xl text-gray-700 w-full max-w-2xl">
+                <li class="animated-item p-4 bg-gray-50 rounded-lg shadow-sm" style="animation-delay: 0.2s;"><i class="fas fa-check-circle text-green-500 mr-3"></i>Greet people and introduce others.</li>
+                <li class="animated-item p-4 bg-gray-50 rounded-lg shadow-sm" style="animation-delay: 0.4s;"><i class="fas fa-check-circle text-green-500 mr-3"></i>Use subject pronouns (I, you, he, she...).</li>
+                <li class="animated-item p-4 bg-gray-50 rounded-lg shadow-sm" style="animation-delay: 0.6s;"><i class="fas fa-check-circle text-green-500 mr-3"></i>Use the verb "to be" (am, is, are).</li>
+            </ul>
+        </div>
+
+        <!-- Slide 3: Dialogue -->
+        <div class="slide bg-gradient-to-br from-white to-gray-50">
+            <div class="corner-logo">ESL L1</div>
+             <h2 class="text-3xl font-bold mb-6 text-gray-800 animated-item"><i class="fas fa-comments mr-3 text-blue-500"></i>Dialogue: At a new job</h2>
+             <div class="bg-white p-8 rounded-lg shadow-xl w-full max-w-4xl text-lg">
+                <div id="dialogue-container" class="space-y-2">
+                    <p class="dialogue-line opacity-25 p-2 rounded-md" data-text="Hi, Leo. How's it going?"><strong>Maria:</strong> Hi, Leo. How's it going? <button class="play-audio-btn text-blue-500 hover:text-blue-700"><i class="fas fa-volume-up"></i></button></p>
+                    <p class="dialogue-line opacity-25 p-2 rounded-md" data-text="Good morning, Maria. I'm doing well, thank you. How about you?"><strong>Leo:</strong> Good morning, Maria. I'm doing well, thank you. How about you? <button class="play-audio-btn text-blue-500 hover:text-blue-700"><i class="fas fa-volume-up"></i></button></p>
+                    <p class="dialogue-line opacity-25 p-2 rounded-md" data-text="I'm great! Leo, I'd like you to meet Sofia. She's a new graphic designer on our team."><strong>Maria:</strong> I'm great! Leo, I'd like you to meet Sofia. She's a new graphic designer on our team. <button class="play-audio-btn text-blue-500 hover:text-blue-700"><i class="fas fa-volume-up"></i></button></p>
+                </div>
+                 <p class="mt-4 text-sm text-gray-500 text-center">Click the first line of dialogue to begin.</p>
+            </div>
+        </div>
+
+        <!-- Slide 4: Pronunciation - Vowels -->
+        <div class="slide bg-white">
+            <div class="corner-logo">ESL L1</div>
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 animated-item"><i class="fas fa-bullhorn mr-3 text-blue-500"></i>Pronunciation: Vowels</h2>
+             <div class="flex space-x-4 mb-6 animated-item" style="animation-delay: 0.2s;">
+                <button class="vowel-btn bg-blue-500 text-white w-16 h-16 rounded-full text-2xl font-bold shadow-md" data-sound="a" data-examples="cat, map, and">a</button>
+                <button class="vowel-btn bg-blue-500 text-white w-16 h-16 rounded-full text-2xl font-bold shadow-md" data-sound="e" data-examples="red, ten, pen">e</button>
+                <button class="vowel-btn bg-blue-500 text-white w-16 h-16 rounded-full text-2xl font-bold shadow-md" data-sound="i" data-examples="big, sit, is">i</button>
+                <button class="vowel-btn bg-blue-500 text-white w-16 h-16 rounded-full text-2xl font-bold shadow-md" data-sound="o" data-examples="go, no, hello">o</button>
+                <button class="vowel-btn bg-blue-500 text-white w-16 h-16 rounded-full text-2xl font-bold shadow-md" data-sound="u" data-examples="use, cute, music">u</button>
+            </div>
+            <div id="vowel-examples" class="text-2xl text-gray-700 h-8 animated-item" style="animation-delay: 0.4s;">Click a vowel to hear it!</div>
+        </div>
+
+        <!-- Slide 5: Grammar - Pronouns -->
+        <div class="slide bg-gradient-to-br from-white to-gray-50">
+            <div class="corner-logo">ESL L1</div>
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 animated-item"><i class="fas fa-book mr-3 text-blue-500"></i>Grammar: Subject Pronouns</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-4xl text-center">
+                <div class="bg-white p-6 rounded-lg shadow-lg animated-item" style="animation-delay: 0.2s;"><p class="text-3xl font-bold">I</p><p>(yo)</p></div>
+                <div class="bg-white p-6 rounded-lg shadow-lg animated-item" style="animation-delay: 0.3s;"><p class="text-3xl font-bold">You</p><p>(tú, usted)</p></div>
+                <div class="bg-white p-6 rounded-lg shadow-lg animated-item" style="animation-delay: 0.4s;"><p class="text-3xl font-bold">He</p><p>(él)</p></div>
+                <div class="bg-white p-6 rounded-lg shadow-lg animated-item" style="animation-delay: 0.5s;"><p class="text-3xl font-bold">She</p><p>(ella)</p></div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Grammar - Verb "To Be" -->
+        <div class="slide bg-white">
+            <div class="corner-logo">ESL L1</div>
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 animated-item"><i class="fas fa-book mr-3 text-blue-500"></i>Grammar: The Verb "To Be"</h2>
+            <div class="flex w-full max-w-3xl space-x-8">
+                <div class="w-1/3 space-y-2 animated-item" style="animation-delay: 0.2s;">
+                    <button class="pronoun-btn w-full text-left p-4 font-bold text-xl rounded-lg border-2 border-gray-300 hover:bg-gray-100 transition" data-verb="am" data-example="I am a student.">I</button>
+                    <button class="pronoun-btn w-full text-left p-4 font-bold text-xl rounded-lg border-2 border-gray-300 hover:bg-gray-100 transition" data-verb="are" data-example="You are a designer.">You</button>
+                    <button class="pronoun-btn w-full text-left p-4 font-bold text-xl rounded-lg border-2 border-gray-300 hover:bg-gray-100 transition" data-verb="is" data-example="He is the manager.">He / She / It</button>
+                </div>
+                <div id="tobe-result" class="w-2/3 bg-gray-50 rounded-lg flex flex-col justify-center items-center p-8 text-2xl animated-item" style="animation-delay: 0.4s;">
+                    <p class="text-gray-500 text-center">Click a pronoun to see an example!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Quiz -->
+        <div class="slide bg-gradient-to-br from-white to-gray-50">
+            <div class="corner-logo">ESL L1</div>
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 animated-item"><i class="fas fa-pencil-alt mr-3 text-blue-500"></i>Check Your Understanding</h2>
+            <div id="quiz-container" class="bg-white p-8 rounded-lg shadow-xl w-full max-w-2xl text-xl space-y-4 animated-item" style="animation-delay: 0.2s;">
+                <!-- Quiz content will be injected here -->
+            </div>
+        </div>
+
+        <!-- Slide 8: Cultural Note -->
+        <div class="slide bg-white">
+            <div class="corner-logo">ESL L1</div>
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 animated-item"><i class="fas fa-globe-americas mr-3 text-blue-500"></i>Cultural Note</h2>
+            <div class="bg-gray-50 p-8 rounded-lg shadow-xl w-full max-w-3xl text-lg space-y-4 animated-item" style="animation-delay: 0.2s;">
+                <p><strong class="text-blue-600">Informal Greetings:</strong> In the U.S., "Hi" and "Hello" are very common, even at work.</p>
+                <p><strong class="text-blue-600">Handshakes:</strong> A handshake is common when meeting someone for the first time in business.</p>
+            </div>
+        </div>
+
+        <!-- Slide 9: Homework -->
+        <div class="slide bg-gradient-to-br from-blue-600 to-indigo-700 text-white">
+            <h2 class="text-4xl font-bold mb-6 animated-item"><i class="fas fa-home mr-3"></i>Next Steps & Homework</h2>
+            <div class="text-center text-xl">
+                <p class="animated-item" style="animation-delay: 0.2s;">For more exercises, please visit the workbook website.</p>
+                <p class="mt-8 animated-item" style="animation-delay: 0.4s;">
+                    <a href="#" id="workbook-link" class="bg-white text-blue-600 font-bold py-3 px-6 rounded-full hover:bg-blue-100 transition duration-300 text-lg shadow-lg">Go to Workbook</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div id="navigation" class="fixed bottom-4 right-4 z-20 flex space-x-2">
+        <button id="prev-btn" class="bg-white text-gray-700 rounded-full w-14 h-14 shadow-lg flex items-center justify-center hover:bg-gray-200 transition disabled:opacity-50 disabled:cursor-not-allowed">
+            <i class="fas fa-arrow-left text-2xl"></i>
+        </button>
+        <button id="next-btn" class="bg-white text-gray-700 rounded-full w-14 h-14 shadow-lg flex items-center justify-center hover:bg-gray-200 transition">
+            <i class="fas fa-arrow-right text-2xl"></i>
+        </button>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="fixed top-0 left-0 w-full h-1.5 bg-gray-300 z-20">
+        <div id="progress-bar" class="bg-blue-600 h-1.5 transition-all duration-500"></div>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const nextBtn = document.getElementById('next-btn');
+        const prevBtn = document.getElementById('prev-btn');
+        const progressBar = document.getElementById('progress-bar');
+        let currentSlide = 0;
+
+        function updateSlides() {
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active', 'previous');
+                if (index === currentSlide) {
+                    slide.classList.add('active');
+                } else if (index < currentSlide) {
+                    slide.classList.add('previous');
+                }
+            });
+            prevBtn.disabled = currentSlide === 0;
+            nextBtn.disabled = currentSlide === slides.length - 1;
+            const progress = ((currentSlide + 1) / slides.length) * 100;
+            progressBar.style.width = `${progress}%`;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            if (currentSlide < slides.length - 1) {
+                currentSlide++;
+                updateSlides();
+            }
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateSlides();
+            }
+        });
+
+        // --- Audio Feedback ---
+        let audioCtx;
+        function playFeedbackSound(isCorrect) {
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+            const oscillator = audioCtx.createOscillator();
+            const gainNode = audioCtx.createGain();
+            oscillator.connect(gainNode);
+            gainNode.connect(audioCtx.destination);
+
+            gainNode.gain.setValueAtTime(0.1, audioCtx.currentTime);
+            oscillator.frequency.setValueAtTime(isCorrect ? 440 : 220, audioCtx.currentTime);
+            oscillator.type = 'sine';
+
+            oscillator.start();
+            oscillator.stop(audioCtx.currentTime + 0.2);
+        }
+
+        // --- Interactive Dialogue ---
+        const dialogueLines = document.querySelectorAll('.dialogue-line');
+        let currentLine = -1;
+        dialogueLines.forEach((line, index) => {
+            line.addEventListener('click', () => {
+                if(index === 0 && currentLine === -1){
+                     currentLine = 0;
+                     dialogueLines[currentLine].classList.remove('opacity-25');
+                } else if (index === currentLine && currentLine < dialogueLines.length - 1) {
+                    currentLine++;
+                    dialogueLines[currentLine].classList.remove('opacity-25');
+                }
+            });
+        });
+
+        // --- Text-to-Speech ---
+        const synth = window.speechSynthesis;
+        document.querySelectorAll('.play-audio-btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const textToSpeak = button.parentElement.getAttribute('data-text');
+                const utterance = new SpeechSynthesisUtterance(textToSpeak);
+                utterance.lang = 'en-US';
+                synth.speak(utterance);
+            });
+        });
+
+        // --- Vowel Pronunciation ---
+        document.querySelectorAll('.vowel-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const sound = button.dataset.sound;
+                const examples = button.dataset.examples;
+                const utterance = new SpeechSynthesisUtterance(sound);
+                utterance.lang = 'en-US';
+                synth.speak(utterance);
+                document.getElementById('vowel-examples').textContent = `e.g., ${examples}`;
+            });
+        });
+
+        // --- "To Be" Interactive Drill ---
+        const pronounBtns = document.querySelectorAll('.pronoun-btn');
+        const tobeResultDiv = document.getElementById('tobe-result');
+        pronounBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const example = btn.dataset.example;
+                tobeResultDiv.innerHTML = `<p class="text-center font-semibold">${example}</p>`;
+                pronounBtns.forEach(pBtn => pBtn.classList.remove('bg-blue-500', 'text-white', 'border-blue-500'));
+                btn.classList.add('bg-blue-500', 'text-white', 'border-blue-500');
+            });
+        });
+
+        // --- Quiz Logic ---
+        const quizContainer = document.getElementById('quiz-container');
+        const quizData = [
+            { question: "They ___ my colleagues.", options: ["am", "is", "are"], answer: "are" },
+            { question: "'I am' contracts to...", options: ["I'm", "I'll", "I've"], answer: "I'm" },
+            { question: "He ___ a new manager.", options: ["am", "is", "are"], answer: "is" }
+        ];
+        let currentQuestionIndex = 0;
+
+        function loadQuizQuestion() {
+            if (currentQuestionIndex >= quizData.length) {
+                quizContainer.innerHTML = `<p class="font-semibold text-center text-2xl text-green-600">Great job! Quiz complete!</p>`;
+                return;
+            }
+            const currentQuestion = quizData[currentQuestionIndex];
+            quizContainer.innerHTML = `
+                <p class="font-semibold text-center mb-4">${currentQuestion.question}</p>
+                <div class="flex flex-col space-y-3">
+                    ${currentQuestion.options.map(option => `<button class="quiz-option p-3 bg-white border-2 border-gray-300 rounded-lg text-left hover:bg-gray-200 transition">${option}</button>`).join('')}
+                </div>
+                <p class="quiz-feedback text-center font-bold mt-4 h-6"></p>
+            `;
+            addQuizListeners();
+        }
+
+        function addQuizListeners() {
+            document.querySelectorAll('.quiz-option').forEach(optionBtn => {
+                optionBtn.addEventListener('click', () => {
+                    const selectedAnswer = optionBtn.textContent;
+                    const correctAnswer = quizData[currentQuestionIndex].answer;
+                    const feedbackEl = document.querySelector('.quiz-feedback');
+
+                    document.querySelectorAll('.quiz-option').forEach(btn => {
+                        btn.disabled = true;
+                        btn.classList.remove('hover:bg-gray-200');
+                        if (btn.textContent === correctAnswer) {
+                             btn.classList.add('bg-green-500', 'text-white', 'border-green-500');
+                        }
+                    });
+
+                    if (selectedAnswer === correctAnswer) {
+                        playFeedbackSound(true);
+                        feedbackEl.textContent = "Correct!";
+                        feedbackEl.className = 'quiz-feedback text-center font-bold mt-4 text-green-600';
+                    } else {
+                        playFeedbackSound(false);
+                        optionBtn.classList.add('bg-red-500', 'text-white', 'border-red-500');
+                        feedbackEl.textContent = `Correct answer: ${correctAnswer}`;
+                        feedbackEl.className = 'quiz-feedback text-center font-bold mt-4 text-red-600';
+                    }
+
+                    setTimeout(() => {
+                        currentQuestionIndex++;
+                        loadQuizQuestion();
+                    }, 1500);
+                });
+            });
+        }
+
+        document.getElementById('workbook-link').addEventListener('click', (e) => {
+            e.preventDefault();
+            alert("This would link to the interactive workbook website!");
+        });
+
+        // Initialize
+        updateSlides();
+        loadQuizQuestion();
+    </script>
+</body>
+</html>
