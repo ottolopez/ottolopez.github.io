@@ -39,7 +39,7 @@
 
         <header class="mb-6">
             <h1 class="text-4xl md:text-5xl font-bold text-sky-800">Pasaje del Día</h1>
-            <p class="text-neutral-500 mt-2">Lectura bíblica diaria "A Través de la Biblia" para 2025-2026</p>
+            <p class="text-neutral-500 mt-2">Lectura bíblica diaria "A Través de la Biblia" para 2026</p>
         </header>
 
         <div class="bg-sky-50 border border-sky-200 rounded-xl p-4 mb-6">
@@ -82,29 +82,22 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Datos del plan de lectura para 2025
-            const passages2025 = {
-            // Datos del plan de lectura para 2026
             const passages2026 = {
-                enero: { 1: "Apocalipsis 1:4-9", 2: "Apocalipsis 1:10-18", 3: "Apocalipsis 1:17-20", 6: "Apocalipsis 2:1-4", 7: "Apocalipsis 2:4-7", 8: "Apocalipsis 2:8-11", 9: "Apocalipsis 2:12-15", 10: "Apocalipsis 2:16-3:2", 13: "Apocalipsis 3:2-6", 14: "Apocalipsis 3:7-12", 15: "Apocalipsis 3:12-16", 16: "Apocalipsis 3:16-19", 17: "Apocalipsis 3:20-22", 20: "Apocalipsis 4:1-6", 21: "Apocalipsis 4:7-5:1", 22: "Apocalipsis 5:2-14", 23: "Apocalipsis 6:1", 24: "Apocalipsis 6:1-8", 27: "Apocalipsis 6:8-17", 28: "Apocalipsis 7:1", 29: "Apocalipsis 7:2-4", 30: "Apocalipsis 7:5-12", 31: "Apocalipsis 7:13-17" },
-                febrero: { 3: "Apocalipsis 8:1", 4: "Apocalipsis 8:2-5", 5: "Apocalipsis 8:6-13", 6: "Apocalipsis 9:1-6", 7: "Apocalipsis 9:7-21", 10: "Apocalipsis 9:21-10:3", 11: "Apocalipsis 10:3-7", 12: "Apocalipsis 10:8-11:2", 13: "Apocalipsis 11:3-13", 14: "Apocalipsis 11:13-12:2", 17: "Apocalipsis 12:2-6", 18: "Apocalipsis 12:6-9", 19: "Apocalipsis 12:10-17", 20: "Apocalipsis 13:1", 21: "Apocalipsis 13:2-8", 24: "Apocalipsis 13:9-18", 25: "Apocalipsis 14:1-5", 26: "Apocalipsis 14:5-8", 27: "Apocalipsis 14:9-20", 28: "Apocalipsis 14:20-15:1" },
-                marzo: { 3: "Apocalipsis 15:2-8", 4: "Apocalipsis 15:8-16:9", 5: "Apocalipsis 16:9-18", 6: "Apocalipsis 16:19-17:5", 7: "Apocalipsis 17:5-18", 10: "Apocalipsis 18:1-8", 11: "Apocalipsis 18:9-24", 12: "Apocalipsis 19:1", 13: "Apocalipsis 19:2-12", 14: "Apocalipsis 19:12-21", 17: "Apocalipsis 20:1-5", 18: "Apocalipsis 20:5-9", 19: "Apocalipsis 20:9-13", 20: "Apocalipsis 20:14-21:2", 21: "Apocalipsis 21:2-5", 24: "Apocalipsis 21:5-16", 25: "Apocalipsis 21:16-20", 26: "Apocalipsis 21:21-22:2", 27: "Apocalipsis 22:2-21", 28: "Guías 1", 31: "Guías 2" },
-                abril: { 1: "Guías 3", 2: "Guías 4", 3: "Guías 5", 4: "Guías 6", 7: "Guías 7", 8: "Guías 8", 9: "Guías 9", 10: "Guías 10", 11: "Génesis introducción", 14: "Génesis 1:1", 15: "Génesis 1:1", 16: "Génesis 1:2-28", 17: "Génesis 1:29-2:9", 18: "Génesis 2:10-3:3", 21: "Génesis 3:4-19", 22: "Génesis 3:20-4:1", 23: "Génesis 4:16-5:32", 24: "Génesis 6:1-22", 25: "Génesis 7:1-8:13", 28: "Génesis 8:13-9:11", 29: "Génesis 9:12-10:32", 30: "Génesis 11:1-32" },
-                mayo: { 1: "Génesis 12:1-20", 2: "Génesis 13:1-14:20", 5: "Génesis 14:21-15:12", 6: "Génesis 15:13-17:5", 7: "Génesis 17:6-27", 8: "Génesis 18:1-33", 9: "Génesis 19:1-28", 12: "Génesis 19:27-21:11", 13: "Génesis 21:11-22:10", 14: "Génesis 22:11-23:20", 15: "Génesis 24:1-34", 16: "Génesis 24:35-25:18", 19: "Génesis 25:19-26:11", 20: "Génesis 26:12-27:40", 21: "Génesis 27:41-28:22", 22: "Génesis 29:1-35", 23: "Génesis 30:1-31:21", 26: "Génesis 31:22-32:19", 27: "Génesis 32:20-33:20", 28: "Génesis 34:1-31", 29: "Génesis 35:1-29", 30: "Génesis 36:1-37:8" },
-                junio: { 2: "Génesis 37:9-36", 3: "Génesis 38:1-39:3", 4: "Génesis 39:4-40:1", 5: "Génesis 40:1-41:14", 6: "Génesis 41:15-57", 9: "Génesis 42:1-38", 10: "Génesis 43:1-44:7", 11: "Génesis 44:8-46:4", 12: "Génesis 46:5-47:10", 13: "Génesis 48:15-49:12", 16: "Génesis 49:13-50:26", 17: "Mateo introducción", 18: "Mateo 1:1-10", 19: "Mateo 1:11-23", 20: "Mateo 1:24-2:10", 23: "Mateo 2:11-3:2", 24: "Mateo 3:3-4:7", 25: "Mateo 4:8-25", 26: "Mateo 5:1-3", 27: "Mateo 5:4-25", 30: "Mateo 5:26-6:6" },
-                julio: { 1: "Mateo 5:26-6:6", 2: "Mateo 6:7-34", 3: "Mateo 7:1-20", 4: "Mateo 7:21-8:12", 7: "Mateo 8:13-25", 8: "Mateo 8:23-9:15", 9: "Mateo 9:16-10:8", 10: "Mateo 10:8-10:37", 11: "Mateo 10:38-11:27", 14: "Mateo 11:28-12:32", 15: "Mateo 12:23-13:9", 16: "Mateo 13:10-32", 17: "Mateo 13:33-52", 18: "Mateo 13:53-14:33", 21: "Mateo 14:34-15:39", 22: "Mateo 16:1-21", 23: "Mateo 16:22-17:23", 24: "Mateo 17:24-18:35", 25: "Mateo 19:1-24", 28: "Mateo 19:25-20:29", 29: "Mateo 20:30-21:31", 30: "Mateo 21:32-22:22", 31: "Mateo 22:23-23:24" },
-                agosto: { 1: "Mateo 23:25-24:3", 4: "Mateo 24:4-14", 5: "Mateo 24:15-36", 6: "Mateo 24:37-25:33", 7: "Mateo 25:34-26:29", 8: "Mateo 26:30-75", 11: "Mateo 27:1-50", 12: "Mateo 27:51-28:7", 13: "Mateo 28:8-20", 14: "Éxodo 1:1-22", 15: "Éxodo 2:1-25", 18: "Éxodo 3:1-22", 19: "Éxodo 4:1-31", 20: "Éxodo 5:1-23", 21: "Éxodo 6:1-20", 22: "Éxodo 6:26-7:25", 25: "Éxodo 8:1-9:11", 26: "Éxodo 9:12-10:23", 27: "Éxodo 10:24-12:8", 28: "Éxodo 12:9-42", 29: "Éxodo 12:43-14:10" },
-                septiembre: { 1: "Éxodo 14:11-15:10", 2: "Éxodo 15:11-16:18", 3: "Éxodo 16:19-17:7", 4: "Éxodo 17:8-18:27", 5: "Éxodo 19:1-20:2", 8: "Éxodo 20:3-25", 9: "Éxodo 20:26-22:25", 10: "Éxodo 23:1-25:7", 11: "Éxodo 25:8-30", 12: "Éxodo 25:31-27:8", 15: "Éxodo 27:9-28:35", 16: "Éxodo 28:36-30:16", 17: "Éxodo 30:17-32:6", 18: "Éxodo 32:7-33:11", 19: "Éxodo 33:12-35:5", 22: "Éxodo 35:6-38:7", 23: "Éxodo 38:8-40:38", 24: "Marcos 1:1-3", 25: "Marcos 1:4-34", 26: "Marcos 1:35-2:14", 29: "Marcos 2:15-3:30", 30: "Marcos 3:31-4:41" },
-                octubre: { 1: "Marcos 5:1-6:3", 2: "Marcos 6:4-56", 3: "Marcos 7", 6: "Marcos 8", 7: "Marcos 9", 8: "Marcos 10:1-45", 9: "Marcos 10:46-11:33", 10: "Marcos 12:1-40", 13: "Marcos 12:41-13:27", 14: "Marcos 13:28-14:21", 15: "Marcos 14:22-72", 16: "Marcos 15:1-38", 17: "Marcos 15:39-16:20", 20: "Levítico 1:1-3", 21: "Levítico 1:4-17", 22: "Levítico 2:1-10", 23: "Levítico 2:11-3:7", 24: "Levítico 3:8-4:2", 27: "Levítico 4:3-26", 28: "Levítico 4:27-5:6", 29: "Levítico 5:7-6:7", 30: "Levítico 6:8-30", 31: "Levítico 7:1-34" },
-                noviembre: { 3: "Levítico 8:1-5", 4: "Levítico 8:6-14", 5: "Levítico 8:15-36", 6: "Levítico 9:1-21", 7: "Levítico 9:22-10:2", 10: "Levítico 10:3-20", 11: "Levítico 11 introducción", 12: "Levítico 11:1-12", 13: "Levítico 11:13-36", 14: "Levítico 11:37-12:4", 17: "Levítico 12:5-8", 18: "Levítico 13:1-3", 19: "Levítico 13:3-6", 20: "Levítico 13:7-28", 21: "Levítico 13:29-14:7", 24: "Levítico 14:5-32", 25: "Levítico 14:33-15:3", 26: "Levítico 15:4-15:33", 27: "Levítico 16:1-2", 28: "Levítico 16:3-19" },
-                diciembre: { 1: "Levítico 16:20-34", 2: "Levítico 17:1-7", 3: "Levítico 17:8-18:5", 4: "Levítico 18:6-30", 5: "Levítico 19:1-8", 8: "Levítico 19:9-37", 9: "Levítico 20:1-16", 10: "Levítico 20:17-21:5", 11: "Levítico 21:6-22:16", 12: "Levítico 22:17-23:3", 15: "Levítico 23:4-14", 16: "Levítico 23:15-25", 17: "Levítico 23:26-24:2", 18: "Levítico 24:3-23", 19: "Levítico 25:1-7", 22: "Levítico 25:8-55", 23: "Levítico 26:1-12", 24: "Levítico 26:13-42", 25: "Levítico 26:43-27:1", 26: "Levítico 27", 29: "Lucas introducción", 30: "Lucas 1:1-25", 31: "Lucas 1:26-64" }
-            };
+                enero: { 1: "Lucas 1:65-2:8", 2: "Lucas 2:9-40", 5: "Lucas 2:41-3:11", 6: "Lucas 3:12-4:1", 7: "Lucas 4:1-13", 8: "Lucas 4:14-44", 9: "Lucas 5:1-35", 12: "Lucas 5:36-6:28", 13: "Lucas 6:24-7:12", 14: "Lucas 7:13-29", 15: "Lucas 7:30-8:15", 16: "Lucas 8:16-36", 19: "Lucas 8:37-9:1", 20: "Lucas 9:2-43", 21: "Lucas 9:44-10:29", 22: "Lucas 10:30-11:4", 23: "Lucas 11:5-20", 26: "Lucas 11:21-12:27", 27: "Lucas 12:28-13:17", 28: "Lucas 13:18-14:17", 29: "Lucas 14:18-15:13", 30: "Lucas 15:14-32" },
+                febrero: { 2: "Lucas 16:1-17", 3: "Lucas 16:18-17:9", 4: "Lucas 17:11-18:14", 5: "Lucas 18:15-19:5", 6: "Lucas 19:6-48", 9: "Lucas 20:1-38", 10: "Lucas 20:39-21:19", 11: "Lucas 21:20-22:3", 12: "Lucas 22:4-34", 13: "Lucas 22:35-53", 16: "Lucas 22:54-23:16", 17: "Lucas 23:17-49", 18: "Lucas 23:50-24:18", 19: "Lucas 24:19-53", 20: "Números 1:1", 23: "Números 1:2-18", 24: "Números 1:21-2:34", 25: "Números 3:1-51", 26: "Números 4:1-5:4", 27: "Números 5:5-6:8" },
+                marzo: { 2: "Números 6:9-7:18", 3: "Números 8:1-26", 4: "Números 9:1-10:28", 5: "Números 10:29-11:15", 6: "Números 11:16-12:16", 9: "Números 13:1-14:12", 10: "Números 14:13-15:8", 11: "Números 15:9-16:40", 12: "Números 16:41-18:20", 13: "Números 18:21-20:1", 16: "Números 20:2-29", 17: "Números 21:1-35", 18: "Números 22:1-41", 19: "Números 22:41-24:25", 20: "Números 25:1-27:5", 23: "Números 27:6-28:8", 24: "Números 28:9-30:16", 25: "Números 31:1-33:49", 26: "Números 33:50-36:13", 27: "Juan Introducción", 30: "Juan 1:1-17", 31: "Juan 1:18-23" },
+                abril: { 1: "Juan 1:24-51", 2: "Juan 2:1-12", 3: "Juan 2:13-3:3", 6: "Juan 3:4-21", 7: "Juan 3:22-4:14", 8: "Juan 4:15-54", 9: "Juan 5:1-20", 10: "Juan 5:21-47", 13: "Juan 6:1-21", 14: "Juan 6:22-58", 15: "Juan 6:59-7:6", 16: "Juan 7:7-53", 17: "Juan 8:1-12", 20: "Juan 8:13-44", 21: "Juan 8:45-9:7", 22: "Juan 9:8-25", 23: "Juan 9:26-10:6", 24: "Juan 10:7-26", 27: "Juan 10:27-11:2", 28: "Juan 11:3-31", 29: "Juan 11:32-57", 30: "Juan 12:1-26" },
+                mayo: { 1: "Juan 12:27-43", 4: "Juan 12:44-13:10", 5: "Juan 13:11-33", 6: "Juan 13:34-14:4", 7: "Juan 14:5-15", 8: "Juan 14:16-15:2", 11: "Juan 15:2-8", 12: "Juan 15:9-16:7", 13: "Juan 16:8-33", 14: "Juan 17:1-6", 15: "Juan 17:7-18:5", 18: "Juan 18:6-28", 19: "Juan 18:29-19:16", 20: "Juan 19:17-20:2", 21: "Juan 20:3-23", 22: "Juan 20:24-21:14", 25: "Juan 21:15-25", 26: "Deuteronomio 1:1-9", 27: "Deuteronomio 1:9-2:5", 28: "Deuteronomio 2:7-4:12", 29: "Deuteronomio 4:24-5:21" },
+                junio: { 1: "Deuteronomio 5:27-6:25", 2: "Deuteronomio 7:1-8:9", 3: "Deuteronomio 8:10-9:18", 4: "Deuteronomio 9:19-11:32", 5: "Deuteronomio 12:1-13:16", 8: "Deuteronomio 13:17-15:15", 9: "Deuteronomio 15:16-17:20", 10: "Deuteronomio 18:1-19:21", 11: "Deuteronomio 20:1-21:23", 12: "Deuteronomio 22:1-23:7", 15: "Deuteronomio 23:10-25:16", 16: "Deuteronomio 25:17-28:15", 17: "Deuteronomio 28:32-29:29", 18: "Deuteronomio 30:1-20", 19: "Deuteronomio 31:1-32:6", 22: "Deuteronomio 32:7-34:12", 23: "Josué 1:1-9", 24: "Josué 1:10-2:7", 25: "Josué 2:8-4:9", 26: "Josué 4:19-5:15", 29: "Josué 6:1-20", 30: "Josué 7:1-21" },
+                julio: { 1: "Josué 7:25-9:27", 2: "Josué 7:25-9:28", 3: "Josué 7:25-9:29", 6: "Josué 7:25-9:30", 7: "Josué 7:25-9:31", 8: "Josué 7:25-9:32", 9: "Josué 7:25-9:33", 10: "Jueces 1:1-2:16", 13: "Jueces 3:1-4:5", 14: "Jueces 4:6-5:20", 15: "Jueces 5:21-6:15", 16: "Jueces 6:15-7:7", 17: "Jueces 7:10-8:23", 20: "Jueces 8:30-10:5", 21: "Jueces 10:6-11:40", 22: "Jueces 12:1-13:25", 23: "Jueces 14:1-16:23", 24: "Jueces 16:25-19:30", 27: "Jueces 20-21", 28: "Rut 1:1-13", 29: "Rut 1:14-2:3", 30: "Rut 2:3-19", 31: "Rut 2:20-3:2" },
+                agosto: { 3: "Rut 3:3-18", 4: "Rut 4", 5: "Hechos 1:1-3", 6: "Hechos 1:4-26", 7: "Hechos 2:1-13", 10: "Hechos 2:13-47", 11: "Hechos 3:1-26", 12: "Hechos 4:1-22", 13: "Hechos 4:23-5:23", 14: "Hechos 5:24-6:15", 17: "Hechos 7:1-60", 18: "Hechos 8:1-28", 19: "Hechos 8:29-9:16", 20: "Hechos 9:17-43", 21: "Hechos 10:1-29", 24: "Hechos 10:30-12:3", 25: "Hechos 12:4-13:5", 26: "Hechos 13:6-14:7", 27: "Hechos 14:8-15:2", 28: "Hechos 15:3-18", 31: "Hechos 15:19-16:5" },
+                septiembre: { 1: "Hechos 16:6-17:1", 2: "Hechos 17:2-23", 3: "Hechos 17:23-18:11", 4: "Hechos 18:12-19:10", 7: "Hechos 19:11-20:6", 8: "Hechos 20:7-21:4", 9: "Hechos 21:5-22:5", 10: "Hechos 22:6-23:24", 11: "Hechos 23:25-24:25", 14: "Hechos 24:26-25:11", 15: "Hechos 25:12-26:3", 16: "Hechos 26:2-32", 17: "Hechos 27:1-29", 18: "Hechos 27:30-28:31", 21: "1 Samuel 1:1-28", 22: "1 Samuel 2:1-35", 23: "1 Samuel 3:1-4:18", 24: "1 Samuel 4:19-7:6", 25: "1 Samuel 7:7-9:15", 28: "1 Samuel 9:16-11:15", 29: "1 Samuel 12:1-13:14", 30: "1 Samuel 13:15-15:3" },
+                octubre: { 1: "1 Samuel 15:4-16:1", 2: "1 Samuel 16:2-17:58", 5: "1 Samuel 18:1-20:1", 6: "1 Samuel 20:2-21:8", 7: "1 Samuel 21:9-22:23", 8: "1 Samuel 23:1-25:3", 9: "1 Samuel 25:4-26:12", 12: "1 Samuel 26:13-28:7", 13: "1 Samuel 28:8-30:6", 14: "1 Samuel 30:7-31:13", 15: "2 Samuel 1:1-2:9", 16: "2 Samuel 2:10-3:39", 19: "2 Samuel 4:1-5:25", 20: "2 Samuel 6:1-23", 21: "2 Samuel 7:1-17", 22: "2 Samuel 7:18-9:13", 23: "2 Samuel 10:1-11:25", 26: "2 Samuel 11:26-12:23", 27: "2 Samuel 12:24-14:13", 28: "2 Samuel 14:14-15:37", 29: "2 Samuel 16:1-18:5", 30: "2 Samuel 18:6-19:23" },
+                noviembre: { 2: "2 Samuel 19:24-21:22", 3: "2 Samuel 21:22-23:8", 4: "2 Samuel 23:11-24:25", 5: "1 Reyes 1:1-53", 6: "1 Reyes 2:1-46", 9: "1 Reyes 3:1-4:31", 10: "1 Reyes 4:32-6:10", 11: "1 Reyes 6:11-7:39", 12: "1 Reyes 7:40-8:61", 13: "1 Reyes 8:62-10:25", 16: "1 Reyes 10:26-12:30", 17: "1 Reyes 12:31-14:9", 18: "1 Reyes 14:10-15:24", 19: "1 Reyes 15:25-17:7", 20: "1 Reyes 17:8-18:28", 23: "1 Reyes 18:29-19:4", 24: "1 Reyes 19:5-20:43", 25: "1 Reyes 21:1-22:15", 26: "1 Reyes 22:16-53", 27: "2 Reyes 1:1-2:22", 30: "2 Reyes 2:23-3:14" },
+                diciembre: { 1: "2 Reyes 3:15-5:7", 2: "2 Reyes 5:8-6:1", 3: "2 Reyes 6:1-25", 4: "2 Reyes 6:26-8:10", 7: "2 Reyes 8:11-9:30", 8: "2 Reyes 9:31-11:10", 9: "2 Reyes 11:11-13:2", 10: "2 Reyes 13:3-15:5", 11: "2 Reyes 15:6-17:6", 14: "2 Reyes 17:7-18:16", 15: "2 Reyes 18:17-19:32", 16: "2 Reyes 19:33-20:19", 17: "2 Reyes 20:20-22:6", 18: "2 Reyes 22:8-23:25", 21: "2 Reyes 23:26-25:30", 22: "Romanos Introducción", 23: "Romanos 1:1-4", 24: "Romanos 1:5-10", 25: "Romanos 1:11-17", 28: "Romanos 1:18-23", 29: "Romanos 1:24-32", 30: "Romanos 2:1-16", 31: "Romanos 2:17-3:9" }
             };
 
             const monthNames = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
-
-            // Select the appropriate passage data based on the year
-            const passages = year === 2025 ? passages2025 : passages2026;
 
             // Element references
             const dateEl = document.getElementById('current-date');
@@ -116,9 +109,6 @@
 
             // --- App Logic ---
             const now = new Date();
-            // FOR TESTING: Uncomment to test a specific date
-            // const now = new Date('2025-09-02T12:00:00');
-
             const day = now.getDate();
             const monthIndex = now.getMonth();
             const year = now.getFullYear();
@@ -128,9 +118,12 @@
             const formattedDate = new Intl.DateTimeFormat('es-ES', { dateStyle: 'full' }).format(now);
             dateEl.textContent = formattedDate.charAt(0).toUpperCase() + formattedDate.slice(1);
 
-            // Check if the year is 2025 or 2026, otherwise show a message.
-            if (year !== 2025 && year !== 2026) {
-                passageEl.textContent = "El plan de lectura es para los años 2025-2026.";
+            // Select the appropriate passage data
+            const passages = passages2026;
+
+            // Check if the year is 2026, otherwise show a message.
+            if (year !== 2026) {
+                passageEl.textContent = "El plan de lectura es para el año 2026.";
                 linkEl.style.display = 'none';
                 iframeContainerEl.style.display = 'none';
                 document.querySelector('[href*="youtube.com"]').parentElement.parentElement.style.display = 'none';
@@ -143,8 +136,8 @@
             if (todaysPassage) {
                 passageEl.textContent = todaysPassage;
 
-                // Check if it's a linkable passage (contains a colon or is just a book name)
-                const isLinkable = todaysPassage.includes(':') || ['Marcos 7', 'Marcos 8', 'Marcos 9', 'Levítico 27'].includes(todaysPassage);
+                // Check if it's a linkable passage (not an introduction)
+                const isLinkable = !todaysPassage.toLowerCase().includes('introducción');
 
                 if (isLinkable) {
                     const encodedPassage = encodeURIComponent(todaysPassage);
@@ -158,7 +151,7 @@
                     linkEl.style.display = 'inline-block';
 
                 } else {
-                    // Handle non-linkable text like "Guías 1" or "introducción"
+                    // Handle non-linkable text like "Introducción"
                     linkEl.style.display = 'none';
                     iframeEl.style.display = 'none';
                     noPassageMessageEl.style.display = 'flex';
