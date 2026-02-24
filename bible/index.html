@@ -39,7 +39,7 @@
 
         <header class="mb-6">
             <h1 class="text-4xl md:text-5xl font-bold text-sky-800">Pasaje del Día</h1>
-            <p class="text-neutral-500 mt-2">Lectura bíblica diaria "A Través de la Biblia" para 2025</p>
+            <p class="text-neutral-500 mt-2">Lectura bíblica diaria "A Través de la Biblia" para 2025-2026</p>
         </header>
 
         <div class="bg-sky-50 border border-sky-200 rounded-xl p-4 mb-6">
@@ -84,6 +84,8 @@
         document.addEventListener('DOMContentLoaded', function() {
             // Datos del plan de lectura para 2025
             const passages2025 = {
+            // Datos del plan de lectura para 2026
+            const passages2026 = {
                 enero: { 1: "Apocalipsis 1:4-9", 2: "Apocalipsis 1:10-18", 3: "Apocalipsis 1:17-20", 6: "Apocalipsis 2:1-4", 7: "Apocalipsis 2:4-7", 8: "Apocalipsis 2:8-11", 9: "Apocalipsis 2:12-15", 10: "Apocalipsis 2:16-3:2", 13: "Apocalipsis 3:2-6", 14: "Apocalipsis 3:7-12", 15: "Apocalipsis 3:12-16", 16: "Apocalipsis 3:16-19", 17: "Apocalipsis 3:20-22", 20: "Apocalipsis 4:1-6", 21: "Apocalipsis 4:7-5:1", 22: "Apocalipsis 5:2-14", 23: "Apocalipsis 6:1", 24: "Apocalipsis 6:1-8", 27: "Apocalipsis 6:8-17", 28: "Apocalipsis 7:1", 29: "Apocalipsis 7:2-4", 30: "Apocalipsis 7:5-12", 31: "Apocalipsis 7:13-17" },
                 febrero: { 3: "Apocalipsis 8:1", 4: "Apocalipsis 8:2-5", 5: "Apocalipsis 8:6-13", 6: "Apocalipsis 9:1-6", 7: "Apocalipsis 9:7-21", 10: "Apocalipsis 9:21-10:3", 11: "Apocalipsis 10:3-7", 12: "Apocalipsis 10:8-11:2", 13: "Apocalipsis 11:3-13", 14: "Apocalipsis 11:13-12:2", 17: "Apocalipsis 12:2-6", 18: "Apocalipsis 12:6-9", 19: "Apocalipsis 12:10-17", 20: "Apocalipsis 13:1", 21: "Apocalipsis 13:2-8", 24: "Apocalipsis 13:9-18", 25: "Apocalipsis 14:1-5", 26: "Apocalipsis 14:5-8", 27: "Apocalipsis 14:9-20", 28: "Apocalipsis 14:20-15:1" },
                 marzo: { 3: "Apocalipsis 15:2-8", 4: "Apocalipsis 15:8-16:9", 5: "Apocalipsis 16:9-18", 6: "Apocalipsis 16:19-17:5", 7: "Apocalipsis 17:5-18", 10: "Apocalipsis 18:1-8", 11: "Apocalipsis 18:9-24", 12: "Apocalipsis 19:1", 13: "Apocalipsis 19:2-12", 14: "Apocalipsis 19:12-21", 17: "Apocalipsis 20:1-5", 18: "Apocalipsis 20:5-9", 19: "Apocalipsis 20:9-13", 20: "Apocalipsis 20:14-21:2", 21: "Apocalipsis 21:2-5", 24: "Apocalipsis 21:5-16", 25: "Apocalipsis 21:16-20", 26: "Apocalipsis 21:21-22:2", 27: "Apocalipsis 22:2-21", 28: "Guías 1", 31: "Guías 2" },
@@ -97,8 +99,12 @@
                 noviembre: { 3: "Levítico 8:1-5", 4: "Levítico 8:6-14", 5: "Levítico 8:15-36", 6: "Levítico 9:1-21", 7: "Levítico 9:22-10:2", 10: "Levítico 10:3-20", 11: "Levítico 11 introducción", 12: "Levítico 11:1-12", 13: "Levítico 11:13-36", 14: "Levítico 11:37-12:4", 17: "Levítico 12:5-8", 18: "Levítico 13:1-3", 19: "Levítico 13:3-6", 20: "Levítico 13:7-28", 21: "Levítico 13:29-14:7", 24: "Levítico 14:5-32", 25: "Levítico 14:33-15:3", 26: "Levítico 15:4-15:33", 27: "Levítico 16:1-2", 28: "Levítico 16:3-19" },
                 diciembre: { 1: "Levítico 16:20-34", 2: "Levítico 17:1-7", 3: "Levítico 17:8-18:5", 4: "Levítico 18:6-30", 5: "Levítico 19:1-8", 8: "Levítico 19:9-37", 9: "Levítico 20:1-16", 10: "Levítico 20:17-21:5", 11: "Levítico 21:6-22:16", 12: "Levítico 22:17-23:3", 15: "Levítico 23:4-14", 16: "Levítico 23:15-25", 17: "Levítico 23:26-24:2", 18: "Levítico 24:3-23", 19: "Levítico 25:1-7", 22: "Levítico 25:8-55", 23: "Levítico 26:1-12", 24: "Levítico 26:13-42", 25: "Levítico 26:43-27:1", 26: "Levítico 27", 29: "Lucas introducción", 30: "Lucas 1:1-25", 31: "Lucas 1:26-64" }
             };
+            };
 
             const monthNames = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+
+            // Select the appropriate passage data based on the year
+            const passages = year === 2025 ? passages2025 : passages2026;
 
             // Element references
             const dateEl = document.getElementById('current-date');
@@ -122,9 +128,9 @@
             const formattedDate = new Intl.DateTimeFormat('es-ES', { dateStyle: 'full' }).format(now);
             dateEl.textContent = formattedDate.charAt(0).toUpperCase() + formattedDate.slice(1);
 
-            // Check if the year is 2025, otherwise show a message.
-            if (year !== 2025) {
-                passageEl.textContent = "El plan de lectura es para el año 2025.";
+            // Check if the year is 2025 or 2026, otherwise show a message.
+            if (year !== 2025 && year !== 2026) {
+                passageEl.textContent = "El plan de lectura es para los años 2025-2026.";
                 linkEl.style.display = 'none';
                 iframeContainerEl.style.display = 'none';
                 document.querySelector('[href*="youtube.com"]').parentElement.parentElement.style.display = 'none';
@@ -132,7 +138,7 @@
             }
 
             // Find the passage for today
-            const todaysPassage = passages2025[monthName] ? passages2025[monthName][day] : null;
+            const todaysPassage = passages[monthName] ? passages[monthName][day] : null;
 
             if (todaysPassage) {
                 passageEl.textContent = todaysPassage;
