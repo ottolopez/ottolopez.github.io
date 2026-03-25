@@ -19,7 +19,16 @@ def generate_index_for_dir(dir_path):
         depth = dir_path.count(os.sep) + 1
 
     # Determine relative path for CSS
-    css_path = '../' * depth + 'style.css'
+    if dir_path == '.':
+        css_path = 'style.css'
+    else:
+        # Normalize path to remove leading ./ and count remaining separators
+        normalized_path = os.path.normpath(dir_path)
+        if normalized_path == '.':
+            css_path = 'style.css'
+        else:
+            depth = normalized_path.count(os.sep) + 1
+            css_path = '../' * depth + 'style.css'
 
     # Create a title for the page
     page_title = f"Index of /{dir_path.replace('.', '', 1).lstrip('/')}"
