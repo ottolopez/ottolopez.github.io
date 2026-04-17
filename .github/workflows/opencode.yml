@@ -23,16 +23,14 @@ jobs:
           fetch-depth: 1
           persist-credentials: false
 
-      - name: Setup OpenCode
+      - name: Install and Setup OpenCode
         run: |
           curl -fsSL https://opencode.ai/install | bash
-          echo "Configuring Z.AI provider..."
-          $HOME/.opencode/bin/opencode auth login --provider zai-coding-plan --api-key "$OPENAI_API_KEY"
+          mkdir -p $HOME/.local/share/opencode
+          echo '{"zai-coding-plan":{"key":"${{ secrets.OPENAI_API_KEY }}","type":"api"}}' > $HOME/.local/share/opencode/auth.json
 
       - name: Run OpenCode
         uses: anomalyco/opencode/github@latest
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         with:
           model: zai-coding-plan/glm-4.7
           use_github_token: "true"
