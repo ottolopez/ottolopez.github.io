@@ -26,8 +26,7 @@ jobs:
       - name: Run OpenCode
         uses: anomalyco/opencode/github@latest
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          model: zai-coding-plan/glm-5.1
+          model: zai-coding-plan/glm-4.7
           use_github_token: "true"
