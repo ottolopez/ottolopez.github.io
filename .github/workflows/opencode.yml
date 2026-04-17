@@ -23,14 +23,10 @@ jobs:
           fetch-depth: 1
           persist-credentials: false
 
-      - name: Install and Setup OpenCode
-        run: |
-          curl -fsSL https://opencode.ai/install | bash
-          mkdir -p $HOME/.local/share/opencode
-          echo '{"zai-coding-plan":{"key":"${{ secrets.OPENAI_API_KEY }}","type":"api"}}' > $HOME/.local/share/opencode/auth.json
-
       - name: Run OpenCode
         uses: anomalyco/opencode/github@latest
+        env:
+          ZAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         with:
           model: zai-coding-plan/glm-4.7
           use_github_token: "true"
